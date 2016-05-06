@@ -2,9 +2,9 @@
 
 set_time_limit(600);
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF('');
+$mpdf = new \Mpdf\Mpdf('');
 
 $mpdf->list_auto_mode = 'mpdf';	// Used for demonstration of lists
 //==============================================================
@@ -1540,7 +1540,7 @@ Hallo world (image-orientation)
 
 <p>If document direction is RTL (body dir=rtl, html dir=rtl), then you need to set directionality before setting non-HTML headers e.g.</p>
 <p class="code">
-	$mpdf = new mPDF();<br />
+	$mpdf = new \Mpdf\Mpdf();<br />
 	$mpdf->SetDirectionality(\'rtl\');	// i.e. add this in<br />
 	$mpdf->SetHeader($h);<br />
 	$mpdf->SetFooter($f);<br />

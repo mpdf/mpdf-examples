@@ -475,9 +475,9 @@ Border conflict resolution in tables with border-collapse set to "collapse". mPD
 //==============================================================
 //==============================================================
 //==============================================================
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF('en-GB-x','A4','','',10,10,10,10,6,3);
+$mpdf = new \Mpdf\Mpdf('en-GB-x','A4','','',10,10,10,10,6,3);
 
 $mpdf->SetDisplayMode('fullpage');
 

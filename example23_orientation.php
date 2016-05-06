@@ -20,10 +20,10 @@ $html = '
 //==============================================================
 //==============================================================
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 
-$mpdf = new mPDF('c','A4','','',42,15,67,67,20,15);
+$mpdf = new \Mpdf\Mpdf('c','A4','','',42,15,67,67,20,15);
 
 $mpdf->SetDisplayMode('fullpage','two');
 

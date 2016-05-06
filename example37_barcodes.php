@@ -1,6 +1,5 @@
 <?php
 
-
 $html = '
 <html>
 <head>
@@ -398,7 +397,6 @@ mpdf-->
 
 <p><a href="http://www.mailsorttechnical.com/docs/mug_jun_2009/MUG_10_2008_Mailsort_700.pdf">http://www.mailsorttechnical.com/docs/mug_jun_2009/MUG_10_2008_Mailsort_700.pdf</a>  page 20</p>
 
-
 </div>
 
 <pagebreak />
@@ -424,12 +422,19 @@ Human-readable text is only produced as part of the barcode object in EAN-13, IS
 </body>
 </html>
 ';
-//==============================================================
-//==============================================================
-require_once __DIR__ . '/../vendor/autoload.php';
 
-$mpdf = new mPDF('','','','',20,15,25,25,10,10);
-$mpdf->WriteHTML($html);
+require_once __DIR__ . '/vendor/autoload.php';
+
+$mpdf = new \Mpdf\Mpdf('','','','',20,15,25,25,10,10);
+
+try {
+
+	$mpdf->WriteHTML($html);
+
+} catch (\Mpdf\MpdfException $e) {
+
+	die ($e->getMessage());
+
+}
+
 $mpdf->Output();
-
-exit;

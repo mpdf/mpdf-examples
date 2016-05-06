@@ -21,9 +21,9 @@ $html = '
 //==============================================================
 //==============================================================
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF('c');
+$mpdf = new \Mpdf\Mpdf('c');
 
 $mpdf->SetDisplayMode('fullpage');
 

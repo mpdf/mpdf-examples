@@ -71,8 +71,8 @@ $html = '
 //==============================================================
 //==============================================================
 //==============================================================
-require_once __DIR__ . '/../vendor/autoload.php';
-$mpdf = new mPDF('c');
+require_once __DIR__ . '/vendor/autoload.php';
+$mpdf = new \Mpdf\Mpdf('c');
 
 $mpdf->mirrorMargins = true;
 

@@ -132,9 +132,9 @@ ol, ul { text-align: justify;
 
 //echo $html; exit;
 //==============================================================
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetDisplayMode('fullpage');
 

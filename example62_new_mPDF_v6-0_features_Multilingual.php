@@ -1,12 +1,9 @@
 <?php
 
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF('');
-
-
-//==============================================================
+$mpdf = new \Mpdf\Mpdf('');
 
 $html = '
 <body>
@@ -132,9 +129,6 @@ $html = '
 </ul>
 ';
 
-
-
-//==============================================================
 $mpdf->autoScriptToLang = true;
 $mpdf->baseScript = 1;	// Use values in classes/ucdn.php  1 = LATIN
 $mpdf->autoVietnamese = true;
@@ -150,4 +144,3 @@ $mpdf->autoLangToFont = true;
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-exit;

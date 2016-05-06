@@ -1,12 +1,13 @@
 <?php
 
-
-define('_MPDF_URI','../');
+define('_MPDF_URI', '../');
 define('_MPDF_PATH', '../');
-require_once __DIR__ . '/../vendor/autoload.php';
-$mpdf = new mPDF('');
 
-if (strpos($_REQUEST['bodydata'],'id%3D%22MathJax_SVG_Hidden%22')===false) {
+require_once __DIR__ . '/vendor/autoload.php';
+
+$mpdf = new \Mpdf\Mpdf();
+
+if (strpos($_REQUEST['bodydata'], 'id%3D%22MathJax_SVG_Hidden%22')===false) {
 	die("Hacking attempt");
 }
 
@@ -35,7 +36,7 @@ for ($i=0;$i<count($m[0]);$i++) {
 
 if ($_POST['PDF']=='PDF') {
 //=====================================================
-// ADD a stylesheet
+/ ADD a stylesheet
 $stylesheet = '
 img {	vertical-align: middle; }
 .MathJax_SVG_Display { padding: 1em 0; }

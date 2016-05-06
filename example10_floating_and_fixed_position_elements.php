@@ -83,9 +83,9 @@ At the bottom of the page are two DIV elements with position:fixed and position:
 //==============================================================
 //==============================================================
 //==============================================================
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetDisplayMode('fullpage');
 

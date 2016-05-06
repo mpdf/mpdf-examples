@@ -118,9 +118,9 @@ border-bottom-left-radius:  1em 3em;</span>
 //==============================================================
 //==============================================================
 //==============================================================
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetDisplayMode('fullpage');
 

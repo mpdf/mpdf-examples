@@ -1,11 +1,6 @@
 <?php
 
-
-
-
-define('_MPDF_PATH','../');
-require_once __DIR__ . '/../vendor/autoload.php';
-
+require_once __DIR__ . '/vendor/autoload.php';
 
 $html = '
 <form>
@@ -175,7 +170,7 @@ Checkboxes: <br />
 //==============================================================
 //==============================================================
 
-$mpdf = new mPDF('c');
+$mpdf = new \Mpdf\Mpdf('c');
 
 // LOAD a stylesheet
 $stylesheet = file_get_contents('mpdfstyletables.css');

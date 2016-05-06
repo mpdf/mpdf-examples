@@ -116,7 +116,7 @@ Base direction is an inherited CSS property, so will affect all content, unless.
 NOTE
 - block/table margins/paddings are NOT reversed by direction
 	NB mPDF &lt;5.1 reversed the margins/paddings for blocks when RTL set.
-- language (either CSS "lang", using Autofont, or through initial set-up e.g. $mpdf = new mPDF(\'ar\') )
+- language (either CSS "lang", using Autofont, or through initial set-up e.g. $mpdf = new \Mpdf\Mpdf(\'ar\') )
 	no longer affects direction in any way.
 	- config_cp.php has been changed as a result; any values of "dir" set here are now ineffective
 - default text-align is now as per CSS spec: "a nameless value which is dependent on direction"
@@ -311,10 +311,10 @@ NOTE
 	}
 //==============================================================
 //==============================================================
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 
-$mpdf = new mPDF('','A4','','',32,25,27,25,16,13);
+$mpdf = new \Mpdf\Mpdf('','A4','','',32,25,27,25,16,13);
 
 $mpdf->SetDirectionality('rtl');
 $mpdf->mirrorMargins = true;

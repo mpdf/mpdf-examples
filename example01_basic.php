@@ -171,8 +171,8 @@ Level 3 subitem
 //==============================================================
 //==============================================================
 
-require_once __DIR__ . '/../vendor/autoload.php';
-$mpdf = new mPDF('c');
+require_once __DIR__ . '/vendor/autoload.php';
+$mpdf = new \Mpdf\Mpdf('c');
 
 $mpdf->WriteHTML($html);
 $mpdf->Output();

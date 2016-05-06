@@ -10,9 +10,9 @@ $html = '
 //==============================================================
 //==============================================================
 //==============================================================
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->PDFA = true;
 $mpdf->PDFAauto = true;

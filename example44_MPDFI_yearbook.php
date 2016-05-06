@@ -3,7 +3,7 @@
 // First write all your entries to a PDF file, forcing each entry to fit on one page
 
 // required to load FPDI classes
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 // Define the maximum containing box width & height for each text box as it will appear on the final page (no padding or margin here)
 $pw = 80;
@@ -15,7 +15,7 @@ $border = 3;	// millimetres round final boxes (-1 for no border)
 $align = 'T';	// T(op) or M(iddle) for content of final output boxes
 
 // Only change the first parameter of the next line e.g. utf-8
-$mpdf = new mPDF('', array(($pw*(1/$minK)),($ph*(1/$minK))), '','', 0,($pw*(1/$minK))-$pw,0,($ph*(1/$minK))-$ph,0,0);
+$mpdf = new \Mpdf\Mpdf('', array(($pw*(1/$minK)),($ph*(1/$minK))), '','', 0,($pw*(1/$minK))-$pw,0,($ph*(1/$minK))-$ph,0,0);
 
 $pph = array();
 
@@ -53,7 +53,7 @@ $mpdf->Output('test.pdf','F');
 
 // Now collate those pages using IMPORT - 4 pages to one page
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 $mpdf->SetImportUse();
 $mpdf->SetDisplayMode('fullpage');
 

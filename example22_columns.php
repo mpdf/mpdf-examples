@@ -26,9 +26,9 @@ $loremH = "<h4>Lectus facilisis</h4>
 //==============================================================
 //==============================================================
 //==============================================================
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF('c','A4','','',32,25,27,25,16,13);
+$mpdf = new \Mpdf\Mpdf('c','A4','','',32,25,27,25,16,13);
 
 $mpdf->SetDisplayMode('fullpage');
 

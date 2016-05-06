@@ -189,9 +189,9 @@ Image padding is supported as well as border and margin.
 //==============================================================
 //==============================================================
 //==============================================================
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF('c');
+$mpdf = new \Mpdf\Mpdf('c');
 
 $mpdf->WriteHTML($html);
 

@@ -263,17 +263,10 @@ mpdf-->
 </body>
 </html>
 ';
-//==============================================================
-//==============================================================
-//==============================================================
-//==============================================================
-//==============================================================
-//==============================================================
 
-define('_MPDF_PATH','../');
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF('c','A4','','',20,15,48,25,10,10);
+$mpdf = new \Mpdf\Mpdf('c','A4','','',20,15,48,25,10,10);
 $mpdf->SetProtection(array('print'));
 $mpdf->SetTitle("Acme Trading Co. - Invoice");
 $mpdf->SetAuthor("Acme Trading Co.");
@@ -283,11 +276,6 @@ $mpdf->watermark_font = 'DejaVuSansCondensed';
 $mpdf->watermarkTextAlpha = 0.1;
 $mpdf->SetDisplayMode('fullpage');
 
-
-
 $mpdf->WriteHTML($html);
 
-
-$mpdf->Output(); exit;
-
-exit;
+$mpdf->Output();

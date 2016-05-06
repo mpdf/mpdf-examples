@@ -20,9 +20,9 @@ $html = '
 ';
 //==============================================================
 //==============================================================
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF('c','A4');
+$mpdf = new \Mpdf\Mpdf('c','A4');
 
 $mpdf->WriteHTML($hhtml);
 

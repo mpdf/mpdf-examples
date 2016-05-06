@@ -32,9 +32,9 @@ $html = '
 //==============================================================
 
 // required to load FPDI classes
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF('c','A4','','',32,25,27,25,16,13);
+$mpdf = new \Mpdf\Mpdf('c','A4','','',32,25,27,25,16,13);
 
 $mpdf->mirrorMargins = 1;
 $mpdf->SetDisplayMode('fullpage','two');
@@ -90,7 +90,7 @@ function GetBookletPages($np, $backcover=true) {
 
 
 
-$mpdf = new mPDF('','A4-L','','',0,0,0,0,0,0);
+$mpdf = new \Mpdf\Mpdf('','A4-L','','',0,0,0,0,0,0);
 $mpdf->SetImportUse();
 $ow = $mpdf->h;
 $oh = $mpdf->w;

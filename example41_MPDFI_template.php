@@ -1,9 +1,9 @@
 <?php
 
 // required to load FPDI classes
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF('','','','',15,15,57,16,9,9);
+$mpdf = new \Mpdf\Mpdf('','','','',15,15,57,16,9,9);
 $mpdf->SetImportUse();
 
 $mpdf->SetDisplayMode('fullpage');
