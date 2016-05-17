@@ -41,7 +41,7 @@ div { text-align: justify; }
 Morbi feugiat pulvinar dolor. Cras odio. Donec mattis, nisi id euismod auctor, neque metus pellentesque risus, at eleifend lacus sapien et risus. Phasellus metus. Phasellus feugiat, lectus ac aliquam molestie, leo lacus tincidunt turpis, vel aliquam quam odio et sapien. Mauris ante pede, auctor ac, suscipit quis, malesuada sed, nulla. Integer sit amet odio sit amet lectus luctus euismod. Donec et nulla. Sed quis orci. </div>
 ';
 
-for($i=1; $i<=10; $i++) {
+for ($i=1; $i<=10; $i++) {
 	// $html = $html;
 	if ($i % 3 == 1) { $html = $html2; }
 	else { $html = $html1; }
@@ -84,7 +84,7 @@ for($i=1; $i<=$pagecount; $i++) {
 
 $mpdf->Output();
 
-exit;
+unlink('test.pdf');
 
 //==============================================================
 function SinglePage($html, $pw, $ph, $minK=1, $inc=0.1) {
