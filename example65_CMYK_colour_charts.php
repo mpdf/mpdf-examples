@@ -3,7 +3,7 @@
 // require composer autoload
 require __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf('win-1252', 'A4-L');
+$mpdf = new \Mpdf\Mpdf(['mode' => 'win-1252', 'format' => 'A4-L']);
 
 $mpdf->useOnlyCoreFonts = true;
 $mpdf->SetDisplayMode('fullpage');
@@ -40,4 +40,4 @@ for ($k = 0; $k <= 8; $k++) {    // Black - page group
   }
 }
 
-$mpdf->Output('mpdf.pdf', 'I');
+$mpdf->Output('mpdf.pdf', \Mpdf\Output\Destination::INLINE);

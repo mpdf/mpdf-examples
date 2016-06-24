@@ -2,7 +2,15 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf('c','A4','','',32,25,47,47,10,10);
+$mpdf = new \Mpdf\Mpdf([
+	'mode' => 'c',
+	'margin_left' => 32,
+	'margin_right' => 25,
+	'margin_top' => 47,
+	'margin_bottom' => 47,
+	'margin_header' => 10,
+	'margin_footer' => 10
+]);
 
 $mpdf->mirrorMargins = 1;	// Use different Odd/Even headers and footers and mirror margins
 

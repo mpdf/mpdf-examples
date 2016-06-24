@@ -4,7 +4,7 @@ if (!isset($_REQUEST['html'])) { $_REQUEST['html'] = ''; }
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf('');
+$mpdf = new \Mpdf\Mpdf();
 
 //==============================================================
 

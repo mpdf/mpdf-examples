@@ -77,13 +77,19 @@ mpdf-->
 
 <!-- set the headers/footers - they will occur from here on in the document -->
 <tocpagebreak paging="on" links="on" toc-odd-header-name="html_tocHTMLHeader" toc-even-header-name="html_tocHTMLHeaderEven" toc-odd-footer-name="html_tocHTMLFooter" toc-even-footer-name="html_tocHTMLFooterEven" toc-odd-header-value="on" toc-even-header-value="on" toc-odd-footer-value="on" toc-even-footer-value="on" toc-preHTML="&lt;h2&gt;Contents&lt;/h2&gt;" toc-bookmarkText="Content list" resetpagenum="1" pagenumstyle="A" odd-header-name="html_myHTMLHeader" odd-header-value="on" even-header-name="html_myHTMLHeaderEven" even-header-value="ON" odd-footer-name="html_myHTMLFooter" odd-footer-value="on" even-footer-name="html_myHTMLFooterEven" even-footer-value="on" outdent="2em" toc-pagenumstyle="i" />
-
 ';
 
-//==============================================================
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf('c','A4','','',32,25,27,25,16,13);
+$mpdf = new \Mpdf\Mpdf([
+	'mode' => 'c',
+	'margin_left' => 32,
+	'margin_right' => 25,
+	'margin_top' => 27,
+	'margin_bottom' => 25,
+	'margin_header' => 16,
+	'margin_footer' => 13,
+]);
 
 $mpdf->mirrorMargins = 1;
 
@@ -96,7 +102,6 @@ $stylesheet = file_get_contents('mpdfstyleA4.css');
 $mpdf->WriteHTML($stylesheet,1);	// The parameter 1 tells that this is css/style only and no body/html/text
 
 $mpdf->WriteHTML($html);
-
 
 // Alternative ways to mark ToC entries and Bookmarks
 // This will automatically generate entries from the <h4> tag
@@ -135,8 +140,7 @@ for ($j = 1; $j<7; $j++) {
 	$mpdf->WriteHTML($html);
    }
 }
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// INDEX
+
 $html = '
 <pagebreak type="next-odd" />
 <h2>Index</h2>
@@ -147,6 +151,3 @@ $html = '
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-exit;
-//==============================================================
-//==============================================================

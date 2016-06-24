@@ -136,14 +136,17 @@ $footerE = '<div align="center" style="background-color: #f0f2ff;background: tra
 		My document
 	</div>';
 
-//==============================================================
-//==============================================================
-//==============================================================
-
 require_once __DIR__ . '/vendor/autoload.php';
 
-
-$mpdf = new \Mpdf\Mpdf('c','A4','','',42,15,57,57,20,17);
+$mpdf = new \Mpdf\Mpdf([
+	'mode' => 'c',
+	'margin_left' => 42,
+	'margin_right' => 15,
+	'margin_top' => 57,
+	'margin_bottom' => 57,
+	'margin_header' => 20,
+	'margin_footer' => 17
+]);
 
 $mpdf->displayDefaultOrientation = true;
 

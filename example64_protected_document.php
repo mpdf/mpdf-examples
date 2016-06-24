@@ -21,7 +21,7 @@ This file demonstrates most of the HTML elements.
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf('c');
+$mpdf = new \Mpdf\Mpdf(['mode' => 'c']);
 
 $mpdf->WriteHTML($html);
 

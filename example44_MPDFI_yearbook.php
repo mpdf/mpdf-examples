@@ -15,7 +15,16 @@ $border = 3;	// millimetres round final boxes (-1 for no border)
 $align = 'T';	// T(op) or M(iddle) for content of final output boxes
 
 // Only change the first parameter of the next line e.g. utf-8
-$mpdf = new \Mpdf\Mpdf('', array(($pw*(1/$minK)),($ph*(1/$minK))), '','', 0,($pw*(1/$minK))-$pw,0,($ph*(1/$minK))-$ph,0,0);
+$mpdf = new \Mpdf\Mpdf([
+	'format' => array(($pw*(1/$minK)),($ph*(1/$minK))),
+	'margin_left' => 0,
+	'margin_right' => ($pw*(1/$minK))-$pw,
+	'margin_top' => 0,
+	'margin_bottom' => ($ph*(1/$minK))-$ph,
+	'margin_header' => 0,
+	'margin_footer' => 0
+]);
+
 
 $pph = array();
 

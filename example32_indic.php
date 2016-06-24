@@ -88,16 +88,11 @@ h3 { font-size: 15pt; margin-bottom:0; font-family: sans-serif; }
 <p>&#x985;&#x9b8;&#x9ae;&#x9c0;&#x9af;&#x9bc;&#x9be; &#x9f1;&#x9bf;&#x995;&#x9bf;&#x9aa;&#x9bf;&#x9a1;&#x9bf;&#x9af;&#x9bc;&#x9be;&#x9f0; &#x989;&#x9a6;&#x9cd;&#x9a6;&#x9c7;&#x9b6;&#x9cd;&#x9af; &#x9b9;\'&#x9b2; &#x9b8;&#x9ae;&#x9cd;&#x9aa;&#x9c2;&#x9f0;&#x9cd;&#x9a3; &#x985;&#x9b8;&#x9ae;&#x9c0;&#x9af;&#x9bc;&#x9be; &#x9ad;&#x9be;&#x9b7;&#x9be;&#x9a4; &#x98f;&#x996;&#x9a8;&#x9bf; &#x9ac;&#x9bf;&#x9b6;&#x9cd;&#x9ac;&#x995;&#x9cb;&#x9b7; &#x9aa;&#x9cd;&#x9f0;&#x9a3;&#x9af;&#x9bc;&#x9a8; &#x995;&#x9f0;&#x9be;&#x964; &#x985;&#x9a8;&#x9cd;&#x9af; &#x995;&#x9cb;&#x9a8;&#x9cb; &#x9ad;&#x9be;&#x9b7;&#x9be;&#x9f0; &#x9aa;&#x9cd;&#x9f0;&#x9ac;&#x9a8;&#x9cd;&#x9a7; &#x98f;&#x987; &#x9ac;&#x9bf;&#x9b6;&#x9cd;&#x9ac;&#x995;&#x9cb;&#x9b7;&#x9f0; &#x9ac;&#x9be;&#x9ac;&#x9c7; &#x997;&#x9cd;&#x9f0;&#x9b9;&#x9a8; &#x995;&#x9f0;&#x9be; &#x9a8;&#x9b9;\'&#x9ac;&#x964; &#x9ac;&#x9bf;&#x9b6;&#x9cd;&#x9ac;&#x995;&#x9cb;&#x9b7;&#x9f0; &#x985;&#x9f1;&#x9a6;&#x9be;&#x9a8;&#x995;&#x9be;&#x9f0;&#x9c0;&#x9b8;&#x995;&#x9b2;&#x9b2;&#x9c8; &#x9b8;&#x9be;&#x9a6;&#x9f0;&#x9c7;&#x9f0;&#x9c7; &#x985;&#x9a8;&#x9c1;&#x9f0;&#x9cb;&#x9a7; &#x99c;&#x9a8;&#x9cb;&#x9f1;&#x9be; &#x9b9;\'&#x9b2; &#x9af;&#x9be;&#x9a4;&#x9c7; &#x9a4;&#x9c7;&#x996;&#x9c7;&#x9a4;&#x9b8;&#x995;&#x9b2;&#x9c7; &#x985;&#x9b8;&#x9ae;&#x9c0;&#x9af;&#x9bc;&#x9be; &#x9ad;&#x9be;&#x9b7;&#x9be;&#x9f0; &#x9aa;&#x9cd;&#x9f0;&#x99a;&#x9b2;&#x9bf;&#x9a4; &#x9ac;&#x9be;&#x9a8;&#x9be;&#x9a8; &#x9aa;&#x9a6;&#x9cd;&#x9a7;&#x9a4;&#x9bf; &#x9ae;&#x9be;&#x9a8;&#x9bf; &#x99a;&#x9b2;&#x9c7;&#x964; &#x9ac;&#x9bf;&#x9a6;&#x9c7;&#x9b6;&#x9c0; &#x9b6;&#x9ac;&#x9cd;&#x9a6;&#x9f0; &#x985;&#x9b8;&#x9ae;&#x9c0;&#x9af;&#x9bc;&#x9be; &#x9aa;&#x9cd;&#x9f0;&#x9a4;&#x9bf;&#x9f0;&#x9c2;&#x9aa;&#x9f0; &#x995;&#x9cd;&#x9b7;&#x9c7;&#x9a4;&#x9cd;&#x9f0;&#x9a4; &#x9af;&#x9bf;&#x9b9;&#x9c7;&#x9a4;&#x9c1; &#x985;&#x9b8;&#x9ae;&#x9c0;&#x9af;&#x9bc;&#x9be; &#x9b8;&#x9be;&#x9b9;&#x9bf;&#x9a4;&#x9cd;&#x9af;&#x9bf;&#x995;&#x9b8;&#x995;&#x9b2; &#x98f;&#x9a4;&#x9bf;&#x9af;&#x9bc;&#x9be;&#x993; &#x990;&#x995;&#x9cd;&#x9af;&#x9ae;&#x9a4;&#x9a4; &#x989;&#x9aa;&#x9a8;&#x9c0;&#x9a4; &#x9b9;\'&#x9ac; &#x9aa;&#x9f0;&#x9be; &#x9a8;&#x9be;&#x987;, &#x9f1;&#x9bf;&#x995;&#x9bf;&#x9aa;&#x9bf;&#x9a1;&#x9bf;&#x9af;&#x9bc;&#x9be;&#x9a4; &#x9ac;&#x9bf;&#x9a6;&#x9c7;&#x9b6;&#x9c0; &#x9b6;&#x9ac;&#x9cd;&#x9a6;&#x9f0; &#x9af;&#x9bf;&#x995;&#x9cb;&#x9a8;&#x9cb; &#x9a7;&#x9f0;&#x9a8;&#x9f0; &#x985;&#x9b8;&#x9ae;&#x9c0;&#x9af;&#x9bc;&#x9be; &#x9f0;&#x9c2;&#x9aa; &#x997;&#x9cd;&#x9f0;&#x9be;&#x9b9;&#x9cd;&#x9af; &#x995;&#x9f0;&#x9be; &#x9b9;\'&#x9ac;&#x964;
 </p>
 ';
-//==============================================================
-//==============================================================
-//==============================================================
+
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf('');
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-exit;
-//==============================================================
-//==============================================================

@@ -1,6 +1,5 @@
 <?php
 
-
 $html = '
 <style>
 p { text-align: justify; }
@@ -55,16 +54,20 @@ td { text-align: justify; }
 <h4>Korean</h4>
 <p lang="ko">&#xd0a4;&#xc2a4;&#xc758; &#xace0;&#xc720;&#xc870;&#xac74;&#xc740; &#xc785;&#xc220;&#xb07c;&#xb9ac; &#xb9cc;&#xb098;&#xc57c; &#xd558;&#xace0; &#xd2b9;&#xbcc4;&#xd55c; &#xae30;&#xc220;&#xc740; &#xd544;&#xc694;&#xce58; &#xc54a;&#xb2e4;. </p>
 
-
-
 </div>';
-//==============================================================
-//==============================================================
-//==============================================================
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf('+aCJK','A4','','',32,25,27,25,16,13);
+$mpdf = new \Mpdf\Mpdf([
+	'mode' => '+aCJK',
+	'margin_left' => 32,
+	'margin_right' => 25,
+	'margin_top' => 27,
+	'margin_bottom' => 25,
+	'margin_header' => 16,
+	'margin_footer' => 13
+]);
+
 $mpdf->SetDisplayMode('fullpage');
 
 // LOAD a stylesheet
@@ -76,7 +79,3 @@ $mpdf->autoLangToFont = true;
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-exit;
-//==============================================================
-//==============================================================
-//==============================================================

@@ -12,18 +12,11 @@ $html = '
 
 <blockquote>Blockquote: Maecenas arcu justo, malesuada eu, dapibus ac, adipiscing vitae, turpis. Fusce mollis. Aliquam egestas. In purus dolor, facilisis at, fermentum nec, molestie et, metus. Maecenas arcu justo, malesuada eu, dapibus ac, adipiscing vitae, turpis. Fusce mollis. Aliquam egestas. In purus dolor, facilisis at, fermentum nec, molestie et, metus.</blockquote>
 
-<address>Address: Vestibulum feugiat, orci at imperdiet tincidunt, mauris erat facilisis urna, sagittis ultricies dui nisl et lectus. Sed lacinia, lectus vitae dictum sodales, elit ipsum ultrices orci, non euismod arcu diam non metus.</address>
-
-';
-
-
-//==============================================================
-//==============================================================
-//==============================================================
+<address>Address: Vestibulum feugiat, orci at imperdiet tincidunt, mauris erat facilisis urna, sagittis ultricies dui nisl et lectus. Sed lacinia, lectus vitae dictum sodales, elit ipsum ultrices orci, non euismod arcu diam non metus.</address>';
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf('c');
+$mpdf = new \Mpdf\Mpdf(['mode' => 'c']);
 
 $mpdf->SetDisplayMode('fullpage');
 
@@ -46,10 +39,4 @@ $mpdf->SetWatermarkImage('tiger.wmf', 0.15, 'F');
 $mpdf->WriteHTML('<h2>Using a Watermark Image as Background</h2>');
 $mpdf->WriteHTML($html);
 
-
 $mpdf->Output();
-exit;
-
-//==============================================================
-//==============================================================
-//==============================================================

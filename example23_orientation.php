@@ -16,14 +16,17 @@ $html = '
 
 ';
 
-//==============================================================
-//==============================================================
-//==============================================================
-
 require_once __DIR__ . '/vendor/autoload.php';
 
-
-$mpdf = new \Mpdf\Mpdf('c','A4','','',42,15,67,67,20,15);
+$mpdf = new \Mpdf\Mpdf([
+	'mode' => 'c',
+	'margin_left' => 42,
+	'margin_right' => 15,
+	'margin_top' => 67,
+	'margin_bottom' => 67,
+	'margin_header' => 20,
+	'margin_footer' => 15
+]);
 
 $mpdf->SetDisplayMode('fullpage','two');
 
@@ -121,9 +124,4 @@ $mpdf->SetHTMLFooter($footerE,'E');
 $mpdf->WriteHTML($html);
 $mpdf->WriteHTML($html);
 
-
-$mpdf->Output('mpdf.pdf','I');
-exit;
-//==============================================================
-//==============================================================
-//==============================================================
+$mpdf->Output('mpdf.pdf', 'I');

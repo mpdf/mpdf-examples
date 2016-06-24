@@ -1,12 +1,9 @@
 <?php
 
-
-
 $html = '
 <h1>mPDF</h1>
 <h2>Columns</h2>
 ';
-//==============================================================
 
 $loremH = "<h4>Lectus facilisis</h4>
 <p>Sed auctor viverra diam. In lacinia lectus.</p>
@@ -21,14 +18,17 @@ $loremH = "<h4>Lectus facilisis</h4>
 <p>Maecenas arcu justo, malesuada eu, dapibus ac, adipiscing vitae, turpis. Fusce mollis. Aliquam egestas. In purus dolor, facilisis at, fermentum nec, molestie et, metus. Vestibulum feugiat, orci at imperdiet tincidunt, mauris erat facilisis urna, sagittis ultricies dui nisl et lectus. Sed lacinia, lectus vitae dictum sodales, elit ipsum ultrices orci, non euismod arcu diam non metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In suscipit turpis vitae odio. Integer convallis dui at metus. Fusce magna. Sed sed lectus vitae enim tempor cursus. Cras eu erat vel libero sodales congue. Sed erat est, interdum nec, elementum eleifend, pretium at, nibh. Praesent massa diam, adipiscing id, mollis sed, posuere et, urna. Quisque ut leo. Aliquam interdum hendrerit tortor. Vestibulum elit. Vestibulum et arcu at diam mattis commodo. Nam ipsum sem, ultricies at, rutrum sit amet, posuere nec, velit. Sed molestie mollis dui. </p>
 ";
 
-
-
-//==============================================================
-//==============================================================
-//==============================================================
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf('c','A4','','',32,25,27,25,16,13);
+$mpdf = new \Mpdf\Mpdf([
+	'mode' => 'c',
+	'margin_left' => 32,
+	'margin_right' => 25,
+	'margin_top' => 27,
+	'margin_bottom' => 25,
+	'margin_header' => 16,
+	'margin_footer' => 13
+]);
 
 $mpdf->SetDisplayMode('fullpage');
 
@@ -40,38 +40,31 @@ $mpdf->list_indent_first_level = 0;	// 1 or 0 - whether to indent the first leve
 
 $mpdf->max_colH_correction = 1.1;
 
+$mpdf->WriteHTML($html,2);
+$mpdf->WriteHTML($loremH,2);
 
-	$mpdf->WriteHTML($html,2);
-	$mpdf->WriteHTML($loremH,2);
+// consider reducing lineheight when using columns - especially if vAligned justify
+$mpdf->SetDefaultBodyCSS('line-height', 1.2);
 
-	// consider reducing lineheight when using columns - especially if vAligned justify
-	$mpdf->SetDefaultBodyCSS('line-height', 1.2);
+$mpdf->SetColumns(3,'J');
+$mpdf->WriteHTML($loremH,2);
 
-	$mpdf->SetColumns(3,'J');
-	$mpdf->WriteHTML($loremH,2);
-
-	$mpdf->SetColumns(0);
-	$mpdf->WriteHTML('<hr />');
-
-
-	$mpdf->SetColumns(2,'J');
-	$mpdf->WriteHTML($loremH,2);
-	$mpdf->WriteHTML('<hr />');
-	$mpdf->SetColumns(0);
-	$mpdf->WriteHTML('<hr />');
-
-	$mpdf->SetColumns(3,'J');
-	$mpdf->WriteHTML($loremH,2);
-
-	$mpdf->SetColumns(0);
-	$mpdf->WriteHTML('<hr />');
-	$mpdf->SetColumns(2,'J');
-	$mpdf->WriteHTML($loremH,2);
+$mpdf->SetColumns(0);
+$mpdf->WriteHTML('<hr />');
 
 
+$mpdf->SetColumns(2,'J');
+$mpdf->WriteHTML($loremH,2);
+$mpdf->WriteHTML('<hr />');
+$mpdf->SetColumns(0);
+$mpdf->WriteHTML('<hr />');
+
+$mpdf->SetColumns(3,'J');
+$mpdf->WriteHTML($loremH,2);
+
+$mpdf->SetColumns(0);
+$mpdf->WriteHTML('<hr />');
+$mpdf->SetColumns(2,'J');
+$mpdf->WriteHTML($loremH,2);
 
 $mpdf->Output();
-exit;
-//==============================================================
-//==============================================================
-//==============================================================

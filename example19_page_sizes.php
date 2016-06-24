@@ -1,7 +1,5 @@
 <?php
 
-
-
 $hhtml = '
 <htmlpageheader name="myHTMLHeaderOdd" style="display:none">
 <div style="background-color:#BBEEFF" align="center"><b>&nbsp;{PAGENO}&nbsp;</b></div>
@@ -13,16 +11,14 @@ $hhtml = '
 <sethtmlpagefooter name="myHTMLFooterOdd" page="O" value="on" show-this-page="1" />
 ';
 
-//==============================================================
 $html = '
 <h1>mPDF Page Sizes</h1>
 <h3>Changing page (sheet) sizes within the document</h3>
 ';
-//==============================================================
-//==============================================================
+
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf('c','A4');
+$mpdf = new \Mpdf\Mpdf(['mode' => 'c']);
 
 $mpdf->WriteHTML($hhtml);
 
@@ -49,8 +45,4 @@ $mpdf->WriteHTML('<pagebreak sheet-size="11.69in 8.27in" />');
 $mpdf->WriteHTML($html);
 $mpdf->WriteHTML('<tocentry content="A4 landscape (ins)" /><p>This should print on a sheet 11.69in x 8.27in = A4 landscape</p>');
 
-
 $mpdf->Output();
-exit;
-//==============================================================
-//==============================================================

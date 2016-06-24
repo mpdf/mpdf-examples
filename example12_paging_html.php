@@ -1,8 +1,6 @@
 <?php
 
-
 $html = '
-
 <pageheader name="myHeaderNoNum" content-left="My Book Title" content-center="myHeader1" content-right="" header-style="font-family:sans-serif; font-size:8pt; color:#880000;" header-style-right="font-size:12pt; font-weight:bold; font-style:italic; color:#088000;" line="on" />
 
 <pageheader name="myHeaderNoNumEven" content-left="" content-center="myHeader1Even" content-right="{DATE j-m-Y}" header-style="font-family:sans-serif; font-size:8pt; color:#000088;" header-style-left="font-weight:bold; " line="on" />
@@ -64,26 +62,16 @@ $html = '
 
 <h1>Section 5<tocentry content="Section 5" /></h1>
 <div>Section 5</div>
-<p>Integer feugiat venenatis metus. Integer lacinia ultrices ipsum. Proin et arcu. Quisque varius libero. Nullam id arcu. Aenean justo quam, accumsan nec, luctus id, pellentesque molestie, mi. Aliquam sollicitudin feugiat eros. Nunc nisi turpis, consequat id, aliquet et, semper a, augue. Integer nisl ipsum, blandit et, lobortis a, egestas nec, odio. Nulla dolor ligula, nonummy ac, vulputate a, sollicitudin id, orci. Donec laoreet nisl id magna. Curabitur mollis, quam eget fermentum malesuada, risus tortor ullamcorper dolor, nec placerat nisi urna non pede. Aliquam pretium, leo in interdum interdum, ipsum neque accumsan lectus, ac fringilla dui ipsum sed justo. In tincidunt risus convallis odio egestas luctus. Integer volutpat. Donec ultricies, leo in congue iaculis, dolor neque imperdiet nibh, vitae feugiat mi enim nec sapien. Aenean turpis lorem, consequat quis, varius in, posuere vel, eros. Nulla facilisi.</p>
+<p>Integer feugiat venenatis metus. Integer lacinia ultrices ipsum. Proin et arcu. Quisque varius libero. Nullam id arcu. Aenean justo quam, accumsan nec, luctus id, pellentesque molestie, mi. Aliquam sollicitudin feugiat eros. Nunc nisi turpis, consequat id, aliquet et, semper a, augue. Integer nisl ipsum, blandit et, lobortis a, egestas nec, odio. Nulla dolor ligula, nonummy ac, vulputate a, sollicitudin id, orci. Donec laoreet nisl id magna. Curabitur mollis, quam eget fermentum malesuada, risus tortor ullamcorper dolor, nec placerat nisi urna non pede. Aliquam pretium, leo in interdum interdum, ipsum neque accumsan lectus, ac fringilla dui ipsum sed justo. In tincidunt risus convallis odio egestas luctus. Integer volutpat. Donec ultricies, leo in congue iaculis, dolor neque imperdiet nibh, vitae feugiat mi enim nec sapien. Aenean turpis lorem, consequat quis, varius in, posuere vel, eros. Nulla facilisi.</p>';
 
-';
-
-//==============================================================
-//==============================================================
-//==============================================================
 require_once __DIR__ . '/vendor/autoload.php';
-$mpdf = new \Mpdf\Mpdf('c');
+
+$mpdf = new \Mpdf\Mpdf(['mode' => 'c']);
 
 $mpdf->mirrorMargins = true;
 
-$mpdf->SetDisplayMode('fullpage','two');
+$mpdf->SetDisplayMode('fullpage', 'two');
 
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-exit;
-//==============================================================
-//==============================================================
-//==============================================================
-//==============================================================
-//==============================================================

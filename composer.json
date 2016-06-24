@@ -2,6 +2,6 @@
     "name": "mpdf/examples",
     "description": "Example repository for Mpdf HTML to PDF generator",
     "require": {
-        "mpdf/mpdf": "dev-namespaces"
+        "mpdf/mpdf": "dev-development"
     }
 }

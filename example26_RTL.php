@@ -116,7 +116,7 @@ Base direction is an inherited CSS property, so will affect all content, unless.
 NOTE
 - block/table margins/paddings are NOT reversed by direction
 	NB mPDF &lt;5.1 reversed the margins/paddings for blocks when RTL set.
-- language (either CSS "lang", using Autofont, or through initial set-up e.g. $mpdf = new \Mpdf\Mpdf(\'ar\') )
+- language (either CSS "lang", using Autofont, or through initial set-up e.g. <code>$mpdf = new \Mpdf\Mpdf([\'mode\' => \'ar\']);</code>)
 	no longer affects direction in any way.
 	- config_cp.php has been changed as a result; any values of "dir" set here are now ineffective
 - default text-align is now as per CSS spec: "a nameless value which is dependent on direction"
@@ -287,14 +287,13 @@ NOTE
   ),
 );
 
-//==============================================================
 // Create Index entries from random words in $html
-	// Split $html into words
-	$a =preg_split('/<(.*?)>/ms',$html,-1,PREG_SPLIT_DELIM_CAPTURE);
-	$html = '';
-	foreach($a as $i => $e) {
-	   if($i%2==0) {
+// Split $html into words
+$a = preg_split('/<(.*?)>/ms',$html,-1,PREG_SPLIT_DELIM_CAPTURE);
+$html = '';
 
+foreach ($a as $i => $e) {
+	if ($i % 2 === 0) {
 		$words = preg_split('/([\s,\.]+)/',$e,-1,PREG_SPLIT_DELIM_CAPTURE);
 		foreach($words as $w) {
 
@@ -306,15 +305,21 @@ NOTE
 			}
 			$html .= $w;
 		}
-	   }
-	   else { $html .= '<'.$e.'>'; }
+	} else {
+		$html .= '<'.$e.'>';
 	}
-//==============================================================
-//==============================================================
+}
+
 require_once __DIR__ . '/vendor/autoload.php';
 
-
-$mpdf = new \Mpdf\Mpdf('','A4','','',32,25,27,25,16,13);
+$mpdf = new \Mpdf\Mpdf([
+	'margin_left' => 32,
+	'margin_right' => 25,
+	'margin_top' => 27,
+	'margin_bottom' => 25,
+	'margin_header' => 16,
+	'margin_footer' => 13
+]);
 
 $mpdf->SetDirectionality('rtl');
 $mpdf->mirrorMargins = true;
@@ -340,8 +345,6 @@ $mpdf->WriteHTML($html);
 $mpdf->SetColumns(0);
 
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// INDEX
 $html = '
 <pagebreak type="next-odd" />
 <h2>Index</h2>
@@ -350,11 +353,5 @@ $html = '
 ';
 
 $mpdf->WriteHTML($html);
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 
 $mpdf->Output();
-exit;
-//==============================================================
-//==============================================================
-//==============================================================

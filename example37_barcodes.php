@@ -425,7 +425,14 @@ Human-readable text is only produced as part of the barcode object in EAN-13, IS
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf('','','','',20,15,25,25,10,10);
+$mpdf = new \Mpdf\Mpdf([
+	'margin_left' => 20,
+	'margin_right' => 15,
+	'margin_top' => 25,
+	'margin_bottom' => 25,
+	'margin_header' => 10,
+	'margin_footer' => 10,
+]);
 
 try {
 

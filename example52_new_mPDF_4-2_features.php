@@ -456,7 +456,14 @@ This layout can be used to produce company letters with only the first page on l
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf('','A4','','',15,15,20,20,5,5);
+$mpdf = new \Mpdf\Mpdf([
+	'margin_left' => 15,
+	'margin_right' => 15,
+	'margin_top' => 20,
+	'margin_bottom' => 20,
+	'margin_header' => 5,
+	'margin_footer' => 5
+]);
 
 $mpdf->SetDisplayMode('fullpage');
 

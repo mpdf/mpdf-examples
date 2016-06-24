@@ -162,23 +162,16 @@ Checkboxes: <br />
 <input type="button" name="submit" value="Button" />
 <input type="reset" name="submit" value="Reset" />
 <input type="submit" name="submit" value="Submit" />
-</form>
+</form>';
 
-';
+$mpdf = new \Mpdf\Mpdf(['mode' => 'c']);
 
-//==============================================================
-//==============================================================
-//==============================================================
-
-$mpdf = new \Mpdf\Mpdf('c');
-
-// LOAD a stylesheet
+// Load a stylesheet
 $stylesheet = file_get_contents('mpdfstyletables.css');
-$mpdf->WriteHTML($stylesheet,1);	// The parameter 1 tells that this is css/style only and no body/html/text
+$mpdf->WriteHTML($stylesheet, 1); // The parameter 1 tells that this is css/style only and no body/html/text
 
 $mpdf->SetColumns(2,'J');
 
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-exit;
