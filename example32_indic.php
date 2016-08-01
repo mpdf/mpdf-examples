@@ -89,7 +89,8 @@ h3 { font-size: 15pt; margin-bottom:0; font-family: sans-serif; }
 </p>
 ';
 
-require_once __DIR__ . '/vendor/autoload.php';
+$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__ . '/../../..';
+require_once $path . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf();
 

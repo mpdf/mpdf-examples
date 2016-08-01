@@ -1,7 +1,8 @@
 <?php
 
 // require composer autoload
-require __DIR__ . '/vendor/autoload.php';
+$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__ . '/../../..';
+require_once $path . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf(['mode' => 'win-1252', 'format' => 'A4-L']);
 

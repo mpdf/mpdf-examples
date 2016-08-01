@@ -3,7 +3,8 @@
 // First write all your entries to a PDF file, forcing each entry to fit on one page
 
 // required to load FPDI classes
-require_once __DIR__ . '/vendor/autoload.php';
+$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__ . '/../../..';
+require_once $path . '/vendor/autoload.php';
 
 // Define the maximum containing box width & height for each text box as it will appear on the final page (no padding or margin here)
 $pw = 80;
