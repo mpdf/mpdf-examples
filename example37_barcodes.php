@@ -432,6 +432,7 @@ $mpdf = new \Mpdf\Mpdf([
 	'margin_bottom' => 25,
 	'margin_header' => 10,
 	'margin_footer' => 10,
+	'showBarcodeNumbers' => FALSE
 ]);
 
 try {
