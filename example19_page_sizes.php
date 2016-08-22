@@ -16,7 +16,8 @@ $html = '
 <h3>Changing page (sheet) sizes within the document</h3>
 ';
 
-require_once __DIR__ . '/vendor/autoload.php';
+$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__ . '/../../..';
+require_once $path . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf(['mode' => 'c']);
 

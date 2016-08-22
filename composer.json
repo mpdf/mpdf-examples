@@ -1,7 +1,4 @@
 {
     "name": "mpdf/examples",
-    "description": "Example repository for Mpdf HTML to PDF generator",
-    "require": {
-        "mpdf/mpdf": "dev-development"
-    }
+    "description": "Example repository for Mpdf HTML to PDF generator"
 }
