@@ -302,7 +302,12 @@ aligned <img src="img5.png" style="vertical-align: bottom;" />
 </div>
 
 <pagebreak />
+
 <h4>Images from PHP</h4>
+
+<div style="color:red; padding:0; margin:0;">
+	Note: This behaviour changed in mPDF 7.0: from direct mPDF properties to internal public <code>Mpdf::$imageVars</code> property.
+</div>
 
 <br />
 <img src="var:smileyface" />
@@ -310,7 +315,7 @@ aligned <img src="img5.png" style="vertical-align: bottom;" />
 This image was created with the following code:
 
 <p class="code">
-	$img = imagecreatetruecolor(200, 200);<br />
+	$img   = imagecreatetruecolor(200, 200);<br />
 	$white = imagecolorallocate($img, 255, 255, 255);<br />
 	$red   = imagecolorallocate($img, 255,   0,   0);<br />
 	$green = imagecolorallocate($img,   0, 255,   0);<br />
@@ -321,9 +326,10 @@ This image was created with the following code:
 	imagearc($img, 140,  75,  50,  50,  0, 360, $blue);<br />
 	ob_start();<br />
 	imagejpeg($img);<br />
-	$mpdf->smileyface = ob_get_clean(); <br />
+	$mpdf->imageVars[\'smileyface\'] = ob_get_clean(); <br />
 	imagedestroy($img);<br />
 </p>
+
 and written to the document using:
 <p class="code">
 &lt;img src="var:smileyface" /&gt;
@@ -470,7 +476,7 @@ $mpdf->SetDisplayMode('fullpage');
 
 $mpdf->useSubstitutions = true;
 
-// Dynamically create image in var:smileyface
+	// Dynamically create image in var:smileyface
 	$img = imagecreatetruecolor(200, 200);
 	$white = imagecolorallocate($img, 255, 255, 255);
 	$red   = imagecolorallocate($img, 255,   0,   0);
@@ -482,7 +488,7 @@ $mpdf->useSubstitutions = true;
 	imagearc($img, 140,  75,  50,  50,  0, 360, $blue);
 	ob_start();
 	imagejpeg($img);
-	$mpdf->smileyface = ob_get_clean();
+	$mpdf->imageVars['smileyface'] = ob_get_clean();
 	imagedestroy($img);
 
 
@@ -490,8 +496,3 @@ $mpdf->WriteHTML($html);
 
 $mpdf->Output();
 exit;
-
-//==============================================================
-//==============================================================
-//==============================================================
-//==============================================================

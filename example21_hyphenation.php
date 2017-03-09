@@ -341,13 +341,12 @@ $path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__ . '/../../..';
 require_once $path . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf([
-	'mode' =>'c',
-	'margin_left' =>32,
-	'margin_right' =>25,
-	'margin_top' =>27,
-	'margin_bottom' =>25,
-	'margin_header' =>16,
-	'margin_footer' =>13
+	'margin_left' => 32,
+	'margin_right' => 25,
+	'margin_top' => 27,
+	'margin_bottom' => 25,
+	'margin_header' => 16,
+	'margin_footer' => 13
 ]);
 
 $mpdf->SetDisplayMode('fullpage');

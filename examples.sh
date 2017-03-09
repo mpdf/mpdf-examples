@@ -50,3 +50,7 @@ php example60_new_mPDF_v5-7_features.php > examples/example60_new_mPDF_v5-7_feat
 php example61_new_mPDF_v6-0_features.php > examples/example61_new_mPDF_v6-0_features.pdf
 php example62_new_mPDF_v6-0_features_Multilingual.php > examples/example62_new_mPDF_v6-0_features_Multilingual.pdf
 php example63_new_mPDF_v6-0_features_Images.php > examples/example63_new_mPDF_v6-0_features_Images.pdf
+php example64_protected_document.php > examples/example64_protected_document.pdf
+php example65_CMYK_colour_charts.php > examples/example65_CMYK_colour_charts.pdf
+php example66_custom_properties.php > examples/example66_custom_properties.pdf
+php example67_custom_font.php > examples/example67_custom_font.pdf
