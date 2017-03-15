@@ -6,7 +6,7 @@ require_once $path . '/vendor/autoload.php';
 $mpdf = new \Mpdf\Mpdf();
 $sizeConverter = new \Mpdf\SizeConverter($mpdf->dpi, $mpdf->default_font_size);
 
-if (strpos($_REQUEST['bodydata'], 'id%3D%22MathJax_SVG_Hidden%22') === FALSE) {
+if (strpos($_REQUEST['bodydata'], 'id%3D%22MathJax_SVG_Hidden%22') === false) {
 	die('Hacking attempt');
 }
 
@@ -17,7 +17,6 @@ preg_match('/<svg[^>]*>\s*(<defs.*?>.*?<\/defs>)\s*<\/svg>/', $html, $m);
 $defs = $m[1];
 
 $html = preg_replace('/<svg[^>]*>\s*<defs.*?<\/defs>\s*<\/svg>/', '', $html);
-
 $html = preg_replace('/(<svg[^>]*>)/', "\\1" . $defs, $html);
 
 preg_match_all('/<svg([^>]*)style="(.*?)"/', $html, $m);
