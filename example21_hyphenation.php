@@ -351,7 +351,7 @@ $mpdf = new \Mpdf\Mpdf([
 
 $mpdf->SetDisplayMode('fullpage');
 
-$stylesheet = file_get_contents('mpdfstyleA4.css');
+$stylesheet = file_get_contents('assets/mpdfstyleA4.css');
 $stylesheet .= 'p { hyphens: auto; }';
 
 $mpdf->WriteHTML($stylesheet,1);

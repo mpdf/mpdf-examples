@@ -73,11 +73,11 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
 </div>
 
 <h4>Background Images</h4>
-<div style="border:0.1mm solid #880000; background: transparent url(bg.jpg) repeat fixed right top; background-color:#ccffff; ">
+<div style="border:0.1mm solid #880000; background: transparent url(assets/bg.jpg) repeat fixed right top; background-color:#ccffff; ">
 The CSS properties background-image, background-position, and background-repeat are supported as defined in CSS2, as well as the shorthand form "background".
 <br />
 The background has been set on this &lt;div&gt; element to:<br />
-<span style="font-family: mono; font-size: 9pt;">background: transparent url(\'bg.jpg\') repeat fixed right top;</span><br />
+<span style="font-family: mono; font-size: 9pt;">background: transparent url(\'assets/bg.jpg\') repeat fixed right top;</span><br />
 Background gradients can be set on all block elements e.g. P, DIV, H1-H6, as well as on BODY.
 </div>
 

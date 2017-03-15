@@ -159,7 +159,7 @@ Checkboxes: <br />
 <input type="checkbox" name="QLY" value="ON" checked="checked" /> Selected
 <br /><br />
 
-<input type="image" name="submit" src="goto.gif" />
+<input type="image" name="submit" src="assets/goto.gif" />
 <input type="button" name="submit" value="Button" />
 <input type="reset" name="submit" value="Reset" />
 <input type="submit" name="submit" value="Submit" />
@@ -168,7 +168,7 @@ Checkboxes: <br />
 $mpdf = new \Mpdf\Mpdf(['mode' => 'c']);
 
 // Load a stylesheet
-$stylesheet = file_get_contents('mpdfstyletables.css');
+$stylesheet = file_get_contents('assets/mpdfstyletables.css');
 $mpdf->WriteHTML($stylesheet, 1); // The parameter 1 tells that this is css/style only and no body/html/text
 
 $mpdf->SetColumns(2,'J');

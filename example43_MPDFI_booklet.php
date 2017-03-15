@@ -50,7 +50,7 @@ $mpdf->SetDisplayMode('fullpage','two');
 $mpdf->useOnlyCoreFonts = true;
 $mpdf->defaultfooterfontsize = 13;
 $mpdf->AddPage();
-$mpdf->Image('clematis.jpg',0,0,210,297,'jpg','',true, false);	// e.g. the last "false" allows a full page picture
+$mpdf->Image('assets/clematis.jpg',0,0,210,297,'jpg','',true, false);	// e.g. the last "false" allows a full page picture
 $mpdf->y = 70;
 $mpdf->Shaded_box('mPDF Example File', 'Arial', '', 28, '70%', 'DF', 3, '#FFFFFF', '#000044', 10);
 
@@ -62,7 +62,7 @@ $mpdf->WriteHTML($html);
 $mpdf->AddPage('','NEXT-EVEN');
 $mpdf->SetFooter();
 $mpdf->SetAlpha(0.5);
-$mpdf->Image('clematis.jpg',0,0,210,297,'jpg','',true, false);	// e.g. the last "false" allows a full page picture
+$mpdf->Image('assets/clematis.jpg',0,0,210,297,'jpg','',true, false);	// e.g. the last "false" allows a full page picture
 $mpdf->SetAlpha(1);
 
 $mpdf->writeBarcode('978-0-9542246-0-8', 1, 130, 230, 1,0, 3,3,4,4);

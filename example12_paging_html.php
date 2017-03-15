@@ -13,7 +13,7 @@ $html = '
 <htmlpageheader name="myHTMLHeader1" style="display:none">
 <table width="100%" style="border-bottom: 1px solid #000000; vertical-align: bottom; font-family: serif; font-size: 9pt; color: #000088;"><tr>
 <td width="33%">Left header p <span style="font-size:14pt;">{PAGENO}</span></td>
-<td width="33%" align="center"><img src="sunset.jpg" width="126px" /></td>
+<td width="33%" align="center"><img src="assets/sunset.jpg" width="126px" /></td>
 <td width="33%" style="text-align: right;"><span style="font-weight: bold;">Right header</span></td>
 </tr></table>
 </htmlpageheader>
@@ -21,7 +21,7 @@ $html = '
 <htmlpageheader name="myHTMLHeader1Even" style="display:none">
 <table width="100%" style="border-bottom: 1px solid #000000; vertical-align: bottom; font-family: serif; font-size: 9pt; color: #000088;"><tr>
 <td width="33%"><span style="font-weight: bold;">Outer header</span></td>
-<td width="33%" align="center"><img src="sunset.jpg" width="126px" /></td>
+<td width="33%" align="center"><img src="assets/sunset.jpg" width="126px" /></td>
 <td width="33%" style="text-align: right;">Inner header p <span style="font-size:14pt;">{PAGENO}</span></td>
 </tr></table>
 </htmlpageheader>

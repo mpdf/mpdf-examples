@@ -50,7 +50,7 @@ table {
 }
 .table1 tr.thisrow1 {
 	background-image-resolution: 300dpi;
-	background: transparent url(\'bayeux1.jpg\') repeat scroll left top;
+	background: transparent url(\'assets/bayeux1.jpg\') repeat scroll left top;
 }
 .table1 tr.thisrow1 td {
 	height: 28mm;
@@ -67,11 +67,11 @@ table {
 }
 tr.thisrow {
 	border: 3px dashed red;
-	background: transparent url(\'bayeux1.jpg\') repeat scroll left top;
+	background: transparent url(\'assets/bayeux1.jpg\') repeat scroll left top;
 }
 .table3 tr.thisrow {
 	border: 3px dashed orange;
-	background: transparent url(\'bgrock.jpg\') repeat scroll left top;
+	background: transparent url(\'assets/bgrock.jpg\') repeat scroll left top;
 }
 tfoot tr {
 	border: 5px dashed blue;
@@ -105,7 +105,7 @@ div.text {
 </style>
 <body>
 
-<div style="position:fixed; top: 0; right: 0"><img src="tux.svg" width="110" /></div>
+<div style="position:fixed; top: 0; right: 0"><img src="assets/tux.svg" width="110" /></div>
 
 <h1></a>mPDF</h1>
 <h2>Other new features in mPDF Version 5.1</h2>

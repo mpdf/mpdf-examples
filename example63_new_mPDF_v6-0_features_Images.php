@@ -118,17 +118,17 @@ img.crisp {
 <table border="0" cellpadding="10" cellspacing="1" style="font-size: 8pt">
   <tbody>
   <tr>
-    <td align="center" bgcolor="#cc9900"><img src="cc9900.gif" alt="" width="48" height="48"></td>
+    <td align="center" bgcolor="#cc9900"><img src="assets/cc9900.gif" alt="" width="48" height="48"></td>
     <td><font size="1">&nbsp;</font></td>
-    <td align="center" bgcolor="#cc9900"><img src="cc9900_003.png" alt="" width="48" height="48"></td>
+    <td align="center" bgcolor="#cc9900"><img src="assets/cc9900_003.png" alt="" width="48" height="48"></td>
     <td><font size="1">&nbsp;</font></td>
-    <td align="center" bgcolor="#cc9900"><img src="cc9900.png" alt="" width="48" height="48"></td>
+    <td align="center" bgcolor="#cc9900"><img src="assets/cc9900.png" alt="" width="48" height="48"></td>
     <td><font size="1">&nbsp;</font></td>
-    <td align="center" bgcolor="#cc9900"><img src="cc9900_004.png" alt="" width="48" height="48"></td>
+    <td align="center" bgcolor="#cc9900"><img src="assets/cc9900_004.png" alt="" width="48" height="48"></td>
     <td><font size="1">&nbsp;</font></td>
-    <td align="center" bgcolor="#cc9900"><img src="cc9900_002.png" alt="" width="48" height="48"></td>
+    <td align="center" bgcolor="#cc9900"><img src="assets/cc9900_002.png" alt="" width="48" height="48"></td>
     <td><font size="1">&nbsp;</font></td>
-    <td align="center" bgcolor="#cc9900"><img src="cc9900_005.png" alt="" width="48" height="48"></td>
+    <td align="center" bgcolor="#cc9900"><img src="assets/cc9900_005.png" alt="" width="48" height="48"></td>
   </tr>
   <tr>
     <td align="center">Unlabelled GIF image<br />(the usual kind)</td>
@@ -155,12 +155,12 @@ img.crisp {
 <p>The image appears differently on IE9/Safari versus Firefox/Opera. To quote from http://www.libpng.org/pub/png/spec/1.2/PNG-Encoders.html "If the source file\'s gamma value is greater than 1.0, it is probably a display system exponent,....and you should use its reciprocal for the PNG gamma."
 Some applications seem to ignore this, displaying the image how it was probably intended.</p>
 
-<img src="bach1.png" />
+<img src="assets/bach1.png" />
 
 <pagebreak />
 
 <p>The two images below should be displayed with similar colour intensity. The one on the left is a 16-bit gamma-corrected PNG file; on the right is an unlabelled GIF file. Note that in Firefox (31.0) the image on the left looks duller because it has not been gamma-corrected for the display, whilst in IE (9)/Safari/Opera the images looks identical (correct).</p>
-<p style="background-color: #cc9900; padding: 2em;"><img src="butterfly_ProPhoto.png" > <img src="butterfly_ProPhoto.gif" ></p>
+<p style="background-color: #cc9900; padding: 2em;"><img src="assets/butterfly_ProPhoto.png" > <img src="assets/butterfly_ProPhoto.gif" ></p>
 
 <br />
 
@@ -169,7 +169,7 @@ Some applications seem to ignore this, displaying the image how it was probably 
 
 <p>Below is a PNG image which contains an ICC Profile which deliberately changes colours. When correctly displayed (applying the colour profile) ths colours should match the colour names. (In Firefox red appears as green, blue as red etc.)</p>
 
-<div style="background-color: #cc9900; padding: 2em;"><img src="colourTestFakeBRG.png" width="300px" /></div>
+<div style="background-color: #cc9900; padding: 2em;"><img src="assets/colourTestFakeBRG.png" width="300px" /></div>
 
 <pagebreak />
 
@@ -183,12 +183,12 @@ Alpha transparency in PNG images has been fixed to work correctly against colour
 <table>
 <tr>
 <td style="background-color: transparent;">
-<img src="alpha09.png" height="180px" />
-<img src="alpha36.png" height="180px" />
+<img src="assets/alpha09.png" height="180px" />
+<img src="assets/alpha36.png" height="180px" />
 </td>
 <td style="background-color: darkblue;">
-<img src="alpha09.png" height="180px" />
-<img src="alpha36.png" height="180px" />
+<img src="assets/alpha09.png" height="180px" />
+<img src="assets/alpha36.png" height="180px" />
 </td>
 </tr>
 </table>
@@ -213,8 +213,8 @@ mPDF allows you to specify whether interpolation is enabled, using CSS for each 
 <p>The image below on the left has interpolation enabled:</p>
 
 <div>
-<img style="image-rendering:smooth; image-rendering:optimizeQuality; -ms-interpolation-mode:bicubic; " src="bgan6a16.png" width="300px" />
-<img style="image-rendering:crisp-edges; image-rendering:-moz-crisp-edges; image-rendering:-o-crisp-edges; image-rendering:-webkit-optimize-contrast; -ms-interpolation-mode: nearest-neighbor;" src="bgan6a162.png" width="300px" />
+<img style="image-rendering:smooth; image-rendering:optimizeQuality; -ms-interpolation-mode:bicubic; " src="assets/bgan6a16.png" width="300px" />
+<img style="image-rendering:crisp-edges; image-rendering:-moz-crisp-edges; image-rendering:-o-crisp-edges; image-rendering:-webkit-optimize-contrast; -ms-interpolation-mode: nearest-neighbor;" src="assets/bgan6a162.png" width="300px" />
 </div>
 
 <p>NB Interpolation cannot be enabled on background images, SVG or WMF images.</p>
@@ -233,9 +233,9 @@ mPDF allows you to specify whether interpolation is enabled, using CSS for each 
 </p>
 
 <p>In the example SVG below, the upper row of characters are drawn using paths and lines; in the lower row, they are written as text using glyphs defined as an SVG font.</p>
-<img src="fonts-elem-01-t.svg" width="480px" height="360px" />
+<img src="assets/fonts-elem-01-t.svg" width="480px" height="360px" />
 
-<p>See the fonts-elem-01-t.svg file in the examples folder for more details.</p>
+<p>See the assets/fonts-elem-01-t.svg file in the examples folder for more details.</p>
 <p>NB: @font-face is not supported.</p>
 
 

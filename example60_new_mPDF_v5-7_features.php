@@ -109,7 +109,7 @@ dottab.menu {
 }
 .divpic {
 	background:yellow;
-	background: yellow url("bayeux1.jpg") no-repeat scroll left top;
+	background: yellow url("assets/bayeux1.jpg") no-repeat scroll left top;
 	background-size: 100% 100%;
 }
 .div1 {
@@ -464,7 +464,7 @@ dottab.menu { outdent: 4em; }
 <div style="z-index:1;color: green;float: left; width:30%;">Scarlet</div>
 <div style="z-index:2;color: red;">Victoria</div>
 <p>To open/close/select layers in Adobe Reader (10):<br />
-<img src="layers_tab.jpg" /></p>
+<img src="assets/layers_tab.jpg" /></p>
 <p>The layer names and initial state can be set (optionally) e.g.</p>
 <p class="code">
 	$mpdf-&gt;layerDetails[1][\'state\']=\'hidden\';	// Set initial state of layer - "hidden" or ""<br />

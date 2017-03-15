@@ -61,7 +61,7 @@ NB The width that is set defines the width of the content-box. So if you have tw
 </div>
 
 <div class="gradient" style="float: right; width: 28%; margin-bottom: 0pt; ">
-<img src="tiger.wmf" style="float:right" width="70" />This is text in a &lt;div&gt; element that is set to float:right and width:28%. It also has an image with float:right inside. With this exception, you cannot nest elements with the float property set inside one another.
+<img src="assets/tiger.wmf" style="float:right" width="70" />This is text in a &lt;div&gt; element that is set to float:right and width:28%. It also has an image with float:right inside. With this exception, you cannot nest elements with the float property set inside one another.
 </div>
 <div class="gradient" style="float: left; width: 54%; margin-bottom: 0pt; ">
 This is text in a &lt;div&gt; element that is set to float:left and width:54%.

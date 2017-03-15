@@ -33,7 +33,7 @@ table {
 }
 .table1 tr.thisrow1 {
 	background-image-resolution: 300dpi;
-	background: transparent url(\'bayeux1.jpg\') repeat scroll left top;
+	background: transparent url(\'assets/bayeux1.jpg\') repeat scroll left top;
 }
 .table1 tr.thisrow1 td {
 	height: 28mm;
@@ -50,11 +50,11 @@ table {
 }
 tr.thisrow {
 	border: 3px dashed red;
-	background: transparent url(\'bayeux1.jpg\') repeat scroll left top;
+	background: transparent url(\'assets/bayeux1.jpg\') repeat scroll left top;
 }
 .table3 tr.thisrow {
 	border: 3px dashed orange;
-	background: transparent url(\'bgrock.jpg\') repeat scroll left top;
+	background: transparent url(\'assets/bgrock.jpg\') repeat scroll left top;
 }
 tfoot tr {
 	border: 5px dashed blue;
@@ -88,7 +88,7 @@ div.text {
 </style>
 <body style="background:  -moz-repeating-radial-gradient(rgba(255,0,0,0.1), rgba(0,0,255,0.1) 40px, rgba(255,0,0,0.1) 80px)">
 
-<div style="position:fixed; top: 0; right: 0"><img src="tux.svg" width="110" /></div>
+<div style="position:fixed; top: 0; right: 0"><img src="assets/tux.svg" width="110" /></div>
 
 <h1></a>mPDF</h1>
 <h2>New features in mPDF Version 5.1</h2>
@@ -118,9 +118,9 @@ div.text {
 <li>background-image-resolution (custom mPDF CSS-type style) to define resolution of background images</li>
 <li>improved support for SVG images</li>
 <li>SVG and WMF images supported in background-image</li>
-<li>file attachments (embedded in PDF file) &rarr; &rarr; &rarr; &rarr; &rarr; <annotation file="tiger.jpg" content="This is a file attachment (embedded file)
+<li>file attachments (embedded in PDF file) &rarr; &rarr; &rarr; &rarr; &rarr; <annotation file="assets/tiger.jpg" content="This is a file attachment (embedded file)
 Double-click to open attached file
-Right-click to save file on your computer" icon="Paperclip" title="Attached File: tiger.jpg" pos-x="150" /></li>
+Right-click to save file on your computer" icon="Paperclip" title="Attached File: assets/tiger.jpg" pos-x="150" /></li>
 </ul>
 </div>
 
@@ -363,14 +363,14 @@ background: -webkit-gradient(linear, left bottom, left top, color-stop(0.48, rgb
 
 <div class="rounded text">Gradients (linear or radial) can also be used to produce \'masks\' for images. The same syntax is used as for background gradients (e.g. -moz-linear-gradient) but is set using a custom mPDF style: <i>gradient-mask</i>. The rgba() method for defining colours is used: colours are ignored, but the opacity value is used to mask the image.</div>
 
-<p class="code">&lt;img src="windmill.jpg" style="gradient-mask: -moz-radial-gradient(center, ellipse closest-side, rgba(255,255,255,1), rgba(255,255,255,1) 30%, rgba(255,255,255,0) 90%, rgba(255,255,255,0));" /&gt;
-<br /><br />&lt;img src="windmill.jpg" style="gradient-mask: -moz-radial-gradient(center, ellipse closest-side, rgba(255,255,255,1), rgba(255,255,255,1) 70%, rgba(255,255,255,0) 90%, rgba(255,255,255,0));" /&gt;
-<br /><br />&lt;img src="windmill.jpg" style="gradient-mask: -moz-linear-gradient(left, rgba(0,0,0,0) , rgba(0,0,0,1) 50% , rgba(0,0,0,0) 100%);" /&gt;
+<p class="code">&lt;img src="assets/windmill.jpg" style="gradient-mask: -moz-radial-gradient(center, ellipse closest-side, rgba(255,255,255,1), rgba(255,255,255,1) 30%, rgba(255,255,255,0) 90%, rgba(255,255,255,0));" /&gt;
+<br /><br />&lt;img src="assets/windmill.jpg" style="gradient-mask: -moz-radial-gradient(center, ellipse closest-side, rgba(255,255,255,1), rgba(255,255,255,1) 70%, rgba(255,255,255,0) 90%, rgba(255,255,255,0));" /&gt;
+<br /><br />&lt;img src="assets/windmill.jpg" style="gradient-mask: -moz-linear-gradient(left, rgba(0,0,0,0) , rgba(0,0,0,1) 50% , rgba(0,0,0,0) 100%);" /&gt;
 </p>
 
-<img src="windmill.jpg" style="gradient-mask: -moz-radial-gradient(center, ellipse closest-side, rgba(255,255,255,1), rgba(255,255,255,1) 30%, rgba(255,255,255,0) 90%, rgba(255,255,255,0));" />
-<img src="windmill.jpg" style="gradient-mask: -moz-radial-gradient(center, ellipse closest-side, rgba(255,255,255,1), rgba(255,255,255,1) 70%, rgba(255,255,255,0) 90%, rgba(255,255,255,0));" />
-<img src="windmill.jpg" style="gradient-mask: -moz-linear-gradient(left, rgba(0,0,0,0) , rgba(0,0,0,1) 50% , rgba(0,0,0,0) 100%);" />
+<img src="assets/windmill.jpg" style="gradient-mask: -moz-radial-gradient(center, ellipse closest-side, rgba(255,255,255,1), rgba(255,255,255,1) 30%, rgba(255,255,255,0) 90%, rgba(255,255,255,0));" />
+<img src="assets/windmill.jpg" style="gradient-mask: -moz-radial-gradient(center, ellipse closest-side, rgba(255,255,255,1), rgba(255,255,255,1) 70%, rgba(255,255,255,0) 90%, rgba(255,255,255,0));" />
+<img src="assets/windmill.jpg" style="gradient-mask: -moz-linear-gradient(left, rgba(0,0,0,0) , rgba(0,0,0,1) 50% , rgba(0,0,0,0) 100%);" />
 
 
 <br />
@@ -383,15 +383,15 @@ background: -webkit-gradient(linear, left bottom, left top, color-stop(0.48, rgb
 <div style="font-family: Arial; font-size: 18pt; color: rgb(49,124,209)">Image orientation</div>
 
 <div class="rounded text">Images can be rotated using a custom mPDF HTML attribute: rotate. mPDF now also supports the draft CSS3 property of image-orientation. Rotation can be expressed in degrees, radians or grad units; it is corrected if necessary to an orthogonal rotation i.e. 90, 180 or 270 degrees. NB This does not work on background-images.</div>
-<p class="code">&lt;img src="tiger2.png" style="image-orientation: -90deg" width="100" /&gt;
+<p class="code">&lt;img src="assets/tiger2.png" style="image-orientation: -90deg" width="100" /&gt;
 <br />
-&lt;img src="tiger2.png" style="image-orientation: 3.14159rad" width="100" /&gt;
+&lt;img src="assets/tiger2.png" style="image-orientation: 3.14159rad" width="100" /&gt;
 </p>
 
-<img src="tiger2.png" width="100" />
-<img src="tiger2.png" style="image-orientation: 75deg;" width="100" />
-<img src="tiger2.png" style="image-orientation: 180deg; image-resolution: 300dpi; " width="100" />
-<img src="tiger2.png" style="image-orientation: -90deg" width="100" />
+<img src="assets/tiger2.png" width="100" />
+<img src="assets/tiger2.png" style="image-orientation: 75deg;" width="100" />
+<img src="assets/tiger2.png" style="image-orientation: 180deg; image-resolution: 300dpi; " width="100" />
+<img src="assets/tiger2.png" style="image-orientation: -90deg" width="100" />
 
 
 <br />
@@ -409,13 +409,13 @@ The next 3 image files are identical (300px x 300px) but they have been saved wi
 <br />
 NB When used in combination with \'from-image\', a specified resolution is only used if the image does not have an intrinsic resolution. Only JPG, PNG and BMP files store a specified DPI resolution  in the file.</div>
 
-<p class="code">&lt;img src="tiger300px300dpi.png" style="image-resolution: from-image;" /&gt;
-<br />&lt;img src="tiger300px300dpi.png" style="image-resolution: 150dpi;" /&gt;
-<br />&lt;img src="tiger300px96dpi.png" style="image-resolution: from-image;" /&gt;</p>
+<p class="code">&lt;img src="assets/tiger300px300dpi.png" style="image-resolution: from-image;" /&gt;
+<br />&lt;img src="assets/tiger300px300dpi.png" style="image-resolution: 150dpi;" /&gt;
+<br />&lt;img src="assets/tiger300px96dpi.png" style="image-resolution: from-image;" /&gt;</p>
 
-<img src="tiger300px300dpi.png" style="image-resolution: from-image;" />
-<img src="tiger300px300dpi.png" style="image-resolution: 150dpi;" />
-<img src="tiger300px96dpi.png" style="image-resolution: from-image;" />
+<img src="assets/tiger300px300dpi.png" style="image-resolution: from-image;" />
+<img src="assets/tiger300px300dpi.png" style="image-resolution: 150dpi;" />
+<img src="assets/tiger300px96dpi.png" style="image-resolution: from-image;" />
 <br /> <br />
 
 
@@ -424,14 +424,14 @@ NB When used in combination with \'from-image\', a specified resolution is only 
 
 <div class="rounded text">Image resolution can also be applied to a background-image. This can be used as an alternative to the custom mPDF style property - \'background-image-resize\'</div>
 
-<p class="code">&lt;div height="300px" width="300px" style="background: #FFCCEE url(tiger300px96dpi.png); background-image-resolution: from-image; border: 0.2mm solid black;"&gt;</p>
-<div height="300px" width="300px" style="background: #FFCCEE url(tiger300px96dpi.png); background-image-resolution: from-image; border: 0.2mm solid black;">Hallo<br />world
+<p class="code">&lt;div height="300px" width="300px" style="background: #FFCCEE url(assets/tiger300px96dpi.png); background-image-resolution: from-image; border: 0.2mm solid black;"&gt;</p>
+<div height="300px" width="300px" style="background: #FFCCEE url(assets/tiger300px96dpi.png); background-image-resolution: from-image; border: 0.2mm solid black;">Hallo<br />world
 </div>
 
 <br />
 
-<p class="code">&lt;div height="300px" width="300px" style="background-image: url(tiger300px300dpi.png); background-image-resolution: from-image; border: 0.2mm solid black;"&gt;</p>
-<div height="300px" width="300px" style="background-image: url(tiger300px300dpi.png); background-image-resolution: from-image; border: 0.2mm solid black;">
+<p class="code">&lt;div height="300px" width="300px" style="background-image: url(assets/tiger300px300dpi.png); background-image-resolution: from-image; border: 0.2mm solid black;"&gt;</p>
+<div height="300px" width="300px" style="background-image: url(assets/tiger300px300dpi.png); background-image-resolution: from-image; border: 0.2mm solid black;">
 </div>
 
 
@@ -446,15 +446,15 @@ NB When used in combination with \'from-image\', a specified resolution is only 
 <div style="font-family: Arial; font-size: 18pt; color: rgb(49,124,209)">Mixed effects</div>
 
 
-<div style="padding: 15px; background: url(flowers-pattern.jpg) repeat right; border-radius: 90px;background-color: #00f200 ;  ">
+<div style="padding: 15px; background: url(assets/flowers-pattern.jpg) repeat right; border-radius: 90px;background-color: #00f200 ;  ">
 <div style="padding: 15px; background: -moz-linear-gradient(top right, red, orange, yellow, green, blue, indigo, violet); border-radius: 75px; ">
 <div style="padding: 15px; background-gradient: linear #07cdde #00f200 0 0 0.5 1; border-radius: 60px; ">
-<div style="padding: 15px; background: url(flowers-pattern.jpg) repeat right; border-radius: 45px; background-image-resolution: 180dpi; ">
+<div style="padding: 15px; background: url(assets/flowers-pattern.jpg) repeat right; border-radius: 45px; background-image-resolution: 180dpi; ">
 <div style="padding: 15px; background: -moz-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); border-radius: 30px; ">
-<div style="padding: 15px; background: url(alpha3.png) repeat top left; border-radius: 15px; background-image-resolution: 180dpi; ">
+<div style="padding: 15px; background: url(assets/alpha3.png) repeat top left; border-radius: 15px; background-image-resolution: 180dpi; ">
 Hallo World
 </div>
-<div style="padding: 15px; background: url(alpha3.png) repeat top left; border-radius: 15px; background-image-resolution: 360dpi; ">
+<div style="padding: 15px; background: url(assets/alpha3.png) repeat top left; border-radius: 15px; background-image-resolution: 360dpi; ">
 Hallo World
 </div>
 </div>
@@ -466,7 +466,7 @@ Hallo World
 <br />
 
 <div style="background-color:#FF0000 ; width:180px; background-image: -moz-radial-gradient(center, ellipse closest-side, rgba(255,255,255,1), rgba(255,255,255,1) 70%, rgba(255,255,255,0) 90%, rgba(255,255,255,0));">
-<img src="tux.svg" width="180" />
+<img src="assets/tux.svg" width="180" />
 </div>
 
 ';

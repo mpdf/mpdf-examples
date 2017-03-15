@@ -132,7 +132,7 @@ Text before table
 <tr>
 <td>Row C</td>
 <td>C2</td>
-<td style="background: transparent url(\'bg.jpg\') repeat scroll right top;" >Nulla felis erat, imperdiet eu, ullamcorper non, nonummy quis, elit. Suspendisse potenti. Ut a eros at ligula vehicula pretium. Maecenas feugiat pede vel risus. Nulla et lectus. Fusce eleifend neque sit amet erat. Integer consectetuer nulla non orci. Morbi feugiat pulvinar dolor. Cras odio. Donec mattis, nisi id euismod auctor, neque metus pellentesque risus, at eleifend lacus sapien et risus. Phasellus metus. Phasellus feugiat, lectus ac aliquam molestie, leo lacus tincidunt turpis, vel aliquam quam odio et sapien. Mauris ante pede, auctor ac, suscipit quis, malesuada sed, nulla. Integer sit amet odio sit amet lectus luctus euismod. Donec et nulla. Sed quis orci. </td>
+<td style="background: transparent url(\'assets/bg.jpg\') repeat scroll right top;" >Nulla felis erat, imperdiet eu, ullamcorper non, nonummy quis, elit. Suspendisse potenti. Ut a eros at ligula vehicula pretium. Maecenas feugiat pede vel risus. Nulla et lectus. Fusce eleifend neque sit amet erat. Integer consectetuer nulla non orci. Morbi feugiat pulvinar dolor. Cras odio. Donec mattis, nisi id euismod auctor, neque metus pellentesque risus, at eleifend lacus sapien et risus. Phasellus metus. Phasellus feugiat, lectus ac aliquam molestie, leo lacus tincidunt turpis, vel aliquam quam odio et sapien. Mauris ante pede, auctor ac, suscipit quis, malesuada sed, nulla. Integer sit amet odio sit amet lectus luctus euismod. Donec et nulla. Sed quis orci. </td>
 <td>C4</td>
 </tr>
 
@@ -332,7 +332,7 @@ Text before table
 <tr>
 <td>Row B</td>
 <td>B2</td>
-<td style="text-align:center;"><img src="sunset.jpg" width="84" style="border:3px solid #44FF44; vertical-align:top; " /></td>
+<td style="text-align:center;"><img src="assets/sunset.jpg" width="84" style="border:3px solid #44FF44; vertical-align:top; " /></td>
 <td>B4</td>
 </tr>
 
@@ -419,7 +419,7 @@ Text before table
 <tr>
 <td>Row B</td>
 <td>B2</td>
-<td style="text-align:center;"><img src="sunset.jpg" width="84" style="border:3px solid #44FF44; vertical-align:top; " /></td>
+<td style="text-align:center;"><img src="assets/sunset.jpg" width="84" style="border:3px solid #44FF44; vertical-align:top; " /></td>
 <td>B4</td>
 </tr>
 
@@ -525,7 +525,7 @@ $mpdf->SetDisplayMode('fullpage');
 $mpdf->list_indent_first_level = 0; // 1 or 0 - whether to indent the first level of a list
 
 // Load a stylesheet
-$stylesheet = file_get_contents('mpdfstyletables.css');
+$stylesheet = file_get_contents('assets/mpdfstyletables.css');
 $mpdf->WriteHTML($stylesheet, 1); // The parameter 1 tells that this is css/style only and no body/html/text
 
 $mpdf->WriteHTML($html);

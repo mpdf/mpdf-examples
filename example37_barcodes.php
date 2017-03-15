@@ -6,7 +6,7 @@ $html = '
 <style>
 body {font-family: sans-serif;
 	font-size: 9pt;
-	background: transparent url(\'bgbarcode.png\') repeat-y scroll left top;
+	background: transparent url(\'assets/bgbarcode.png\') repeat-y scroll left top;
 }
 h5, p {	margin: 0pt;
 }

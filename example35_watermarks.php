@@ -48,14 +48,14 @@ $mpdf->showWatermarkText = true;
 $mpdf->WriteHTML($html);
 $mpdf->AddPage();
 
-$mpdf->SetWatermarkImage('tiger.wmf', 1, '', array(160,10));
+$mpdf->SetWatermarkImage('assets/tiger.wmf', 1, '', array(160,10));
 $mpdf->showWatermarkImage = true;
 
 $mpdf->WriteHTML('<h2>Using a Watermark as a Header</h2>');
 $mpdf->WriteHTML($html);
 $mpdf->AddPage();
 
-$mpdf->SetWatermarkImage('tiger.wmf', 0.15, 'F');
+$mpdf->SetWatermarkImage('assets/tiger.wmf', 0.15, 'F');
 
 $mpdf->WriteHTML('<h2>Using a Watermark Image as Background</h2>');
 $mpdf->WriteHTML($html);

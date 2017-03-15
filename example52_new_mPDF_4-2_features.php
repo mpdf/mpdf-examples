@@ -25,7 +25,7 @@ body {
 	footer: _blank;
 	resetpagenum: 1;
 	background-gradient: linear #FFFFFF #FFFF44 0 0.5 1 0.5;
-	background: #ccffff url(bgbarcode.png) repeat-y fixed left top;
+	background: #ccffff url(assets/bgbarcode.png) repeat-y fixed left top;
 }
 @page letterhead {
 	margin-top: 2.0cm;
@@ -87,7 +87,7 @@ p { margin-top: 0; }
 <!--mpdf
 
 <htmlpageheader name="myHTMLHeader">
-<div style="float:right; width: 90; height: 90; text-align: right; vertical-align: bottom; border: 1mm double #000088"><img src="tiger.png" width="90" /></div>
+<div style="float:right; width: 90; height: 90; text-align: right; vertical-align: bottom; border: 1mm double #000088"><img src="assets/tiger.png" width="90" /></div>
 
 <div style="color:#0000BB;"><span style="font-weight: bold; font-size: 14pt;">mPDF Version 4.2</span><br />123 Anystreet<br />Your City<br />GD12 4LP<br /><span style="font-size: 15pt;">&#x260e;</span> 01777 123 567
 </div>
@@ -217,11 +217,11 @@ It is not recommended to enable this for regular use, as it will add to the proc
 PNG alpha channel transparency is now fully supported, and works against solid backgrounds, gradients or background images:
 <table>
 <tr>
-<td><img style="vertical-align: top" src="alpha.png" width="90" /></td>
-<td style="background-color:#FFCCFF; "><img style="vertical-align: top" src="alpha.png" width="90" /></td>
-<td style="background-color:#CCFFFF;"><img style="vertical-align: top" src="alpha.png" width="90" /></td>
-<td style="background-color:#CCFFFF; background-gradient: linear #88FFFF #FFFF44 0 0.5 1 0.5; "><img style="vertical-align: top" src="alpha.png" width="90" /></td>
-<td style="background-color:#CCFFFF; background: transparent url(\'bgrock.jpg\') repeat scroll right top;"><img style="vertical-align: top" src="alpha.png" width="90" /></td>
+<td><img style="vertical-align: top" src="assets/alpha.png" width="90" /></td>
+<td style="background-color:#FFCCFF; "><img style="vertical-align: top" src="assets/alpha.png" width="90" /></td>
+<td style="background-color:#CCFFFF;"><img style="vertical-align: top" src="assets/alpha.png" width="90" /></td>
+<td style="background-color:#CCFFFF; background-gradient: linear #88FFFF #FFFF44 0 0.5 1 0.5; "><img style="vertical-align: top" src="assets/alpha.png" width="90" /></td>
+<td style="background-color:#CCFFFF; background: transparent url(\'assets/bgrock.jpg\') repeat scroll right top;"><img style="vertical-align: top" src="assets/alpha.png" width="90" /></td>
 </tr>
 </table>
 
@@ -229,7 +229,7 @@ PNG alpha channel transparency is now fully supported, and works against solid b
 
 <h4>Image Border and padding</h4>
 Image padding is now supported as well as border and margin:
-<img src="sunset.jpg" width="100" style="border:3px solid #44FF44; padding: 1em; vertical-align: text-top; " />
+<img src="assets/sunset.jpg" width="100" style="border:3px solid #44FF44; padding: 1em; vertical-align: text-top; " />
 <br />
 
 <h4>Vertical alignment</h4>
@@ -238,12 +238,12 @@ Image padding is now supported as well as border and margin:
 </div>
 <br />
 <div class="gradient" style="font-size: 80%;">
-baseline: <img src="sunset.jpg" width="50" style="vertical-align: baseline;" />
-text-bottom: <img src="sunset.jpg" width="30" style="vertical-align: text-bottom;" />
-middle: <img src="sunset.jpg" width="30" style="vertical-align: middle;" />
-bottom: <img src="sunset.jpg" width="80" style="vertical-align: bottom;" />
-text-top: <img src="sunset.jpg" width="50" style="vertical-align: text-top;" />
-top: <img src="sunset.jpg" width="100" style="vertical-align: top;" />
+baseline: <img src="assets/sunset.jpg" width="50" style="vertical-align: baseline;" />
+text-bottom: <img src="assets/sunset.jpg" width="30" style="vertical-align: text-bottom;" />
+middle: <img src="assets/sunset.jpg" width="30" style="vertical-align: middle;" />
+bottom: <img src="assets/sunset.jpg" width="80" style="vertical-align: bottom;" />
+text-top: <img src="assets/sunset.jpg" width="50" style="vertical-align: text-top;" />
+top: <img src="assets/sunset.jpg" width="100" style="vertical-align: top;" />
 </div>
 
 
@@ -253,52 +253,52 @@ top: <img src="sunset.jpg" width="100" style="vertical-align: top;" />
 </div>
 
 <div class="gradient" style="margin: 0.5em 0;">
-These images <img src="img1.png" style="vertical-align: top;" />
-are <img src="img2.png" style="vertical-align: top;" />
-<b>top</b> <img src="img3.png" style="vertical-align: top;" />
-aligned <img src="img4.png" style="vertical-align: middle;" />
+These images <img src="assets/img1.png" style="vertical-align: top;" />
+are <img src="assets/img2.png" style="vertical-align: top;" />
+<b>top</b> <img src="assets/img3.png" style="vertical-align: top;" />
+aligned <img src="assets/img4.png" style="vertical-align: middle;" />
 </div>
 
 <div class="gradient" style="margin: 0.5em 0;">
-These images <img src="img1.png" style="vertical-align: text-top;" />
-are <img src="img2.png" style="vertical-align: text-top;" />
-<b>text-top</b> <img src="img3.png" style="vertical-align: text-top;" />
-aligned <img src="img4.png" style="vertical-align: middle;" />
+These images <img src="assets/img1.png" style="vertical-align: text-top;" />
+are <img src="assets/img2.png" style="vertical-align: text-top;" />
+<b>text-top</b> <img src="assets/img3.png" style="vertical-align: text-top;" />
+aligned <img src="assets/img4.png" style="vertical-align: middle;" />
 </div>
 
 <div class="gradient" style="margin: 0.5em 0;">
-These images <img src="img1.png" style="vertical-align: bottom;" />
-are <img src="img2.png" style="vertical-align: bottom;" />
-<b>bottom</b> <img src="img3.png" style="vertical-align: bottom;" />
-aligned <img src="img4.png" style="vertical-align: middle;" />
+These images <img src="assets/img1.png" style="vertical-align: bottom;" />
+are <img src="assets/img2.png" style="vertical-align: bottom;" />
+<b>bottom</b> <img src="assets/img3.png" style="vertical-align: bottom;" />
+aligned <img src="assets/img4.png" style="vertical-align: middle;" />
 </div>
 
 <div class="gradient" style="margin: 0.5em 0;">
-These images <img src="img1.png" style="vertical-align: text-bottom;" />
-are <img src="img2.png" style="vertical-align: text-bottom;" />
-<b>text-bottom</b> <img src="img3.png" style="vertical-align: text-bottom;" />
-aligned <img src="img4.png" style="vertical-align: middle;" />
+These images <img src="assets/img1.png" style="vertical-align: text-bottom;" />
+are <img src="assets/img2.png" style="vertical-align: text-bottom;" />
+<b>text-bottom</b> <img src="assets/img3.png" style="vertical-align: text-bottom;" />
+aligned <img src="assets/img4.png" style="vertical-align: middle;" />
 </div>
 
 <div class="gradient" style="margin: 0.5em 0;">
-These images <img src="img1.png" style="vertical-align: baseline;" />
-are <img src="img2.png" style="vertical-align: baseline;" />
-<b>baseline</b> <img src="img3.png" style="vertical-align: baseline;" />
-aligned <img src="img4.png" style="vertical-align: middle;" />
+These images <img src="assets/img1.png" style="vertical-align: baseline;" />
+are <img src="assets/img2.png" style="vertical-align: baseline;" />
+<b>baseline</b> <img src="assets/img3.png" style="vertical-align: baseline;" />
+aligned <img src="assets/img4.png" style="vertical-align: middle;" />
 </div>
 
 <div class="gradient" style="margin: 0.5em 0;">
-These images <img src="img1.png" style="vertical-align: middle;" />
-are <img src="img2.png" style="vertical-align: middle;" />
-<b>middle</b> <img src="img3.png" style="vertical-align: middle;" />
-aligned <img src="img4.png" style="vertical-align: middle;" />
+These images <img src="assets/img1.png" style="vertical-align: middle;" />
+are <img src="assets/img2.png" style="vertical-align: middle;" />
+<b>middle</b> <img src="assets/img3.png" style="vertical-align: middle;" />
+aligned <img src="assets/img4.png" style="vertical-align: middle;" />
 </div>
 
 <div class="gradient" style="margin: 0.5em 0;">
-These images <img src="img1.png" style="vertical-align: middle;" />
-are <img src="img2.png" style="vertical-align: middle;" />
-<b>middle</b> <img src="img3.png" style="vertical-align: middle;" />
-aligned <img src="img5.png" style="vertical-align: bottom;" />
+These images <img src="assets/img1.png" style="vertical-align: middle;" />
+are <img src="assets/img2.png" style="vertical-align: middle;" />
+<b>middle</b> <img src="assets/img3.png" style="vertical-align: middle;" />
+aligned <img src="assets/img5.png" style="vertical-align: bottom;" />
 </div>
 
 <pagebreak />

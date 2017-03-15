@@ -132,8 +132,8 @@ $header = array(
 //==============================================================
 /*
 // 4.3.003 TEST
-$html = '<div style="width: 170mm; text-align: justify; border: 0.2mm solid #000000;">Browser doesn\'t justify text before a BR <br />Browser does justify text before an IMG  <img src="clematis.jpg" style="width:150mm; height: 5;" /></div>
-<div style="width: 170mm; text-align: justify; border: 0.2mm solid #000000;">Browser doesn\'t justify text before a HR <hr width="80%"/>Browser does justify text before an IMG<img src="clematis.jpg" style="width:150mm; height: 5;" /></div>
+$html = '<div style="width: 170mm; text-align: justify; border: 0.2mm solid #000000;">Browser doesn\'t justify text before a BR <br />Browser does justify text before an IMG  <img src="assets/clematis.jpg" style="width:150mm; height: 5;" /></div>
+<div style="width: 170mm; text-align: justify; border: 0.2mm solid #000000;">Browser doesn\'t justify text before a HR <hr width="80%"/>Browser does justify text before an IMG<img src="assets/clematis.jpg" style="width:150mm; height: 5;" /></div>
 <div style="width: 170mm; text-align: justify; border: 0.2mm solid #000000;">Browser does justify text before a TEXTAREA <textarea name="authors" rows="5" cols="70" wrap="virtual">Quisque viverra. Etiam id libero at magna pellentesque aliquet. Nulla sit amet ipsum id enim tempus dictum. Quisque viverra. Etiam id libero at magna pellentesque aliquet. Nulla sit amet ipsum id enim tempus dictum. Quisque viverra. Etiam id libero at magna pellentesque aliquet. Nulla sit amet ipsum id enim tempus dictum. Quisque viverra. Etiam id libero at magna pellentesque aliquet. Nulla sit amet ipsum id enim tempus dictum. Quisque viverra. Etiam id libero at magna pellentesque aliquet. Nulla sit amet ipsum id enim tempus dictum. Quisque viverra. Etiam id libero at magna pellentesque aliquet. Nulla sit amet ipsum id enim tempus dictum. Quisque viverra. Etiam id libero at magna pellentesque aliquet. Nulla sit amet ipsum id enim tempus dictum. Quisque viverra. Etiam id libero at magna pellentesque aliquet. Nulla sit amet ipsum id enim tempus dictum. </textarea>
 </div>
 <div style="width: 170mm; text-align: justify; border: 0.2mm solid #000000;">Browser does justify text before a SELECT <select size="1" name="status"><option value="A">Active</option><option value="W" >New item from auto_manager: pending validation New item from auto_manager: pending validation</option><option value="I" selected="selected">Incomplete record - pending Incomplete record - pending Incomplete record - pending</option><option value="X" >Flagged for Deletion</option> </select> </div>';
@@ -948,7 +948,7 @@ Calibri:
 
 This test for reversal of chunks in flowing block, preserving consecutive chunks of LTR in an RTL line
 <div dir="rtl" style="font-family:arial; font-size: 18pt; font-feature-settings:\'ccmp\', \'curs\', \'kern\';">
-&#x627;&#x644;&#x62d;&#x645;&#x62f; <span>These</span> <b>English</b> words and <img src="goto.gif" /> <span style="color:red">not reversed</span> &#x0663;&#x0664;&#x0665; &#x644;&#x644;&#x647;
+&#x627;&#x644;&#x62d;&#x645;&#x62f; <span>These</span> <b>English</b> words and <img src="assets/goto.gif" /> <span style="color:red">not reversed</span> &#x0663;&#x0664;&#x0665; &#x644;&#x644;&#x647;
 </div>
 
 
@@ -1668,25 +1668,25 @@ span {
 // Test for alpha transparency in PNG
 $htmlx = '
 <div style="background-color: transparent;">
-<img src="alpha09.png" height="400px" />
-<img src="alpha36.png" height="400px" />
+<img src="assets/alpha09.png" height="400px" />
+<img src="assets/alpha36.png" height="400px" />
 </div>
 
 <div style="background-color: white;">
-<img src="alpha09.png" height="400px" />
-<img src="alpha36.png" height="400px" />
+<img src="assets/alpha09.png" height="400px" />
+<img src="assets/alpha36.png" height="400px" />
 </div>
 <div style="background-color: navy;">
-<img src="alpha09.png" height="400px" />
-<img src="alpha36.png" height="400px" />
+<img src="assets/alpha09.png" height="400px" />
+<img src="assets/alpha36.png" height="400px" />
 </div>
 <div style="background-color: maroon;">
-<img src="alpha09.png" height="400px" />
-<img src="alpha36.png" height="400px" />
+<img src="assets/alpha09.png" height="400px" />
+<img src="assets/alpha36.png" height="400px" />
 </div>
 <div style="background-color: black;">
-<img src="alpha09.png" height="400px" />
-<img src="alpha36.png" height="400px" />
+<img src="assets/alpha09.png" height="400px" />
+<img src="assets/alpha36.png" height="400px" />
 </div>
 
 ';
@@ -1709,11 +1709,11 @@ img.crisp {
 }
 </style>
 <div>
-<img class="smooth" src="pngtestsuite/bgan6a16.png" width="300px" />
+<img class="smooth" src="pngtestsuite/assets/bgan6a16.png" width="300px" />
 <span style="image-rendering:-moz-crisp-edges">
-<img class="crisp" src="pngtestsuite/bgan6a162.png" width="300px" />
+<img class="crisp" src="pngtestsuite/assets/bgan6a162.png" width="300px" />
 </span></div>
-<img src="pngtestsuite/bgan6a162.png" width="300px" />
+<img src="pngtestsuite/assets/bgan6a162.png" width="300px" />
 ';
 
 //==============================================================
@@ -1721,9 +1721,9 @@ img.crisp {
 //==============================================================
 // ICC based Color Profiles in Images + 16-bit Gamma
 $htmlx = '
-PNG (16-bit, Gamma): <div style="background-color: #cc9900; padding: 2em;"><img src="butterfly_ProPhoto.png" ></div>
-PNG (Gamma): <div style="background-color: #cc9900; padding: 2em;"><img src="ColorGammaGradient.png" ></div>
-PNG (ICC Profile): <div style="background-color: #cc9900; padding: 2em;"><img src="colourTestFakeBRG.png" ></div>
+PNG (16-bit, Gamma): <div style="background-color: #cc9900; padding: 2em;"><img src="assets/butterfly_ProPhoto.png" ></div>
+PNG (Gamma): <div style="background-color: #cc9900; padding: 2em;"><img src="assets/ColorGammaGradient.png" ></div>
+PNG (ICC Profile): <div style="background-color: #cc9900; padding: 2em;"><img src="assets/colourTestFakeBRG.png" ></div>
 
 JPEG (ICC Profile):
 <table align="center" cellspacing="4" cellpadding="4">
@@ -1741,16 +1741,16 @@ JPEG (ICC Profile):
 
 <table align="center" width="400"border="0" cellspacing="0" cellpadding="0">
   <tr align="top">
-    <td align="right"> <img src="Upper_Left.jpg" width=180> </td>
-    <td align="left"> <img src="Upper_Right.jpg" width=171> </td>
+    <td align="right"> <img src="assets/Upper_Left.jpg" width=180> </td>
+    <td align="left"> <img src="assets/Upper_Right.jpg" width=171> </td>
   </tr>
   <tr>
-    <td align="right"> <img src="Lower_Left.jpg" width=180> </td>
-    <td align="left"> <img src="Lower_Right.jpg" width=171> </td>
+    <td align="right"> <img src="assets/Lower_Left.jpg" width=180> </td>
+    <td align="left"> <img src="assets/Lower_Right.jpg" width=171> </td>
   </tr>
 </table>
 This should correctly display with the motorbike in green:
-<img src="BGR-Red-Ducati_WCS-Test-TriState.jpg" />
+<img src="assets/BGR-Red-Ducati_WCS-Test-TriState.jpg" />
 ';
 //==============================================================
 //==============================================================

@@ -14,7 +14,7 @@ $mpdf = new \Mpdf\Mpdf([
 
 $mpdf->SetImportUse();
 
-$mpdf->SetDocTemplate('sample_logoheader2.pdf',1);	// 1|0 to continue after end of document or not - used on matching page numbers
+$mpdf->SetDocTemplate('pdf/sample_logoheader2.pdf',1);	// 1|0 to continue after end of document or not - used on matching page numbers
 
 //===================================================
 $mpdf->AddPage();

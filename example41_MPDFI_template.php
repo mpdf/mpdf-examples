@@ -19,7 +19,7 @@ $mpdf->SetDisplayMode('fullpage');
 $mpdf->SetCompression(false);
 
 // Add First page
-$pagecount = $mpdf->SetSourceFile('sample_basic.pdf');
+$pagecount = $mpdf->SetSourceFile('pdf/sample_basic.pdf');
 
 $crop_x = 50;
 $crop_y = 50;

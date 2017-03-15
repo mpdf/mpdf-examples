@@ -129,7 +129,7 @@ this.getField(\'first_language_display\').value = choice;
 <br /><br />
 
 Click this button to see Javascript in action:
-<input type="image" name="imageButton" value="imagesubmitted" src="goto.gif" title="Click to run javascript" onClick="
+<input type="image" name="imageButton" value="imagesubmitted" src="assets/goto.gif" title="Click to run javascript" onClick="
 var npass = this.getField(\'password\').value;
 app.alert(\'Value of password field is: \\\'\' + npass + \'\\\'\');
 var nButton = app.alert({

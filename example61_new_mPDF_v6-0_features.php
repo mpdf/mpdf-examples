@@ -1466,7 +1466,7 @@ The values can be any valid CSS size.</p>
 <li style="border: 1px solid #CCCCCC;">Second item</li>
 <li style="border: 1px solid #CCCCCC; list-style-type: disc;">List style set as \'disc\'</li>
 <li style="border: 1px solid #CCCCCC; list-style-type: none;">List style set as \'none\'</li>
-<li style="border: 1px solid #CCCCCC; list-style-image:url(goto2.gif)">Using an image.</li>
+<li style="border: 1px solid #CCCCCC; list-style-image:url(assets/goto2.gif)">Using an image.</li>
 <li style="border: 1px solid #CCCCCC; list-style-position: inside">List-style-position: inside.</li>
 <li style="border: 1px solid #CCCCCC; list-style-type: U+263Argb(255,0,0);">User defined list bullet</li>
 </ol>
@@ -1483,22 +1483,22 @@ The values can be any valid CSS size.</p>
 <p>In the following examples, note the difference between transform (which is applied after layout) and image-orientation (which is applied before layout):</p>
 <div style="border:1px solid red">
 Hallo world
-<img src="bayeux2.jpg" width="30mm" style="border:2px solid blue; padding:0.5em; background-color: yellow" />
+<img src="assets/bayeux2.jpg" width="30mm" style="border:2px solid blue; padding:0.5em; background-color: yellow" />
 Hallo world
 </div>
 <div style="border:1px solid red">
 Hallo world
-<img src="bayeux2.jpg" width="30mm" style="transform: rotate(30deg);border:2px solid blue; padding:0.5em; background-color: yellow" />
+<img src="assets/bayeux2.jpg" width="30mm" style="transform: rotate(30deg);border:2px solid blue; padding:0.5em; background-color: yellow" />
 Hallo world
 </div>
 <div style="border:1px solid red">
 Hallo world
-<img src="bayeux2.jpg" width="30mm" style="transform:scale(0.5,1) skew(45deg,-45deg) translate(80mm,80mm);border:2px solid blue; padding:0.5em; background-color: yellow" />
+<img src="assets/bayeux2.jpg" width="30mm" style="transform:scale(0.5,1) skew(45deg,-45deg) translate(80mm,80mm);border:2px solid blue; padding:0.5em; background-color: yellow" />
 Hallo world
 </div>
 <div style="border:1px solid red">
 Hallo world
-<img src="bayeux2.jpg" height="30mm" style="image-orientation:90deg;border:2px solid green; padding:0.5em; background-color: yellow" />
+<img src="assets/bayeux2.jpg" height="30mm" style="image-orientation:90deg;border:2px solid green; padding:0.5em; background-color: yellow" />
 Hallo world (image-orientation)
 </div>
 

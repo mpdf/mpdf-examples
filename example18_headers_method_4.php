@@ -8,7 +8,7 @@ $html = '
 <htmlpageheader name="myHTMLHeader1">
 <table width="100%" style="border-bottom: 1px solid #000000; vertical-align: bottom; font-family: serif; font-size: 9pt; color: #000088;"><tr>
 <td width="33%">Left header p <span style="font-size:14pt;">{PAGENO}</span></td>
-<td width="33%" align="center"><img src="sunset.jpg" width="126px" /></td>
+<td width="33%" align="center"><img src="assets/sunset.jpg" width="126px" /></td>
 <td width="33%" style="text-align: right;"><span style="font-weight: bold;">myHTMLHeader1</span></td>
 </tr></table>
 </htmlpageheader>
@@ -16,7 +16,7 @@ $html = '
 <htmlpageheader name="myHTMLHeader1Even">
 <table width="100%" style="border-bottom: 1px solid #000000; vertical-align: bottom; font-family: serif; font-size: 9pt; color: #000088;"><tr>
 <td width="33%"><span style="font-weight: bold;">myHTMLHeader1Even</span></td>
-<td width="33%" align="center"><img src="sunset.jpg" width="126px" /></td>
+<td width="33%" align="center"><img src="assets/sunset.jpg" width="126px" /></td>
 <td width="33%" style="text-align: right;">Inner header p <span style="font-size:14pt;">{PAGENO}</span></td>
 </tr></table>
 </htmlpageheader>
@@ -24,7 +24,7 @@ $html = '
 <htmlpageheader name="myHTMLHeader2">
 <table width="100%" style="border-bottom: 1px solid #880000; vertical-align: bottom; font-family: sans; font-size: 9pt; color: #880000;"><tr>
 <td width="33%">myHTMLHeader2 p.<span style="font-size:14pt;">{PAGENO}</span></td>
-<td width="33%" align="center"><img src="sunset.jpg" width="126px" /></td>
+<td width="33%" align="center"><img src="assets/sunset.jpg" width="126px" /></td>
 <td width="33%" style="text-align: right;"><span style="font-weight: bold;">myHTMLHeader2</span></td>
 </tr></table>
 </htmlpageheader>
@@ -32,7 +32,7 @@ $html = '
 <htmlpageheader name="myHTMLHeader2Even">
 <table width="100%" style="border-bottom: 1px solid #880000; vertical-align: bottom; font-family: sans; font-size: 9pt; color: #880000;"><tr>
 <td width="33%"><span style="font-weight: bold;">myHTMLHeader2Even</span></td>
-<td width="33%" align="center"><img src="sunset.jpg" width="126px" /></td>
+<td width="33%" align="center"><img src="assets/sunset.jpg" width="126px" /></td>
 <td width="33%" style="text-align: right;">Inner header p <span style="font-size:14pt;">{PAGENO}</span></td>
 </tr></table>
 </htmlpageheader>

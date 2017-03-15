@@ -105,9 +105,9 @@ ol, ul { text-align: justify;
 <li>Text here lorem ipsum ibisque totum.</li>
 <li>Text here lorem ipsum ibisque totum.</li>
 <li style="list-style-type: U+263Argb(255,0,0);">Text here lorem ipsum ibisque totum.</li>
-<li style="list-style-image:url(goto2.gif)">Text here lorem ipsum ibisque totum.</li>
+<li style="list-style-image:url(assets/goto2.gif)">Text here lorem ipsum ibisque totum.</li>
 <li style="list-style-position: inside; list-style-type: U+263Argb(255,0,0);">Text here lorem ipsum ibisque totum.</li>
-<li style="list-style-position: inside; list-style-image:url(goto2.gif)">Text here lorem ipsum ibisque totum.</li>
+<li style="list-style-position: inside; list-style-image:url(assets/goto2.gif)">Text here lorem ipsum ibisque totum.</li>
 <li>Text here lorem ipsum ibisque totum.</li>
 <li style="list-style-type: disc">Text here lorem ipsum ibisque totum.</li>
 <li style="list-style-type: circle">Text here lorem ipsum ibisque totum.</li>
@@ -119,7 +119,7 @@ ol, ul { text-align: justify;
 <li>&#x644;&#x644;&#x639;&#x631;&#x627;&#x642; &#x627;&#x646; &#x627;&#x644;&#x627;&#x648;&#x644;&#x648;&#x64a;&#x629; &#x62d;&#x627;&#x644;&#x64a;&#x627;</li>
 <li style="color:red;">&#x644;&#x644;&#x639;&#x631;&#x627;&#x642; &#x627;&#x646; &#x627;&#x644;&#x627;&#x648;&#x644;&#x648;&#x64a;&#x629; &#x62d;&#x627;&#x644;&#x64a;&#x627;</li>
 <li>&#x644;&#x644;&#x639;&#x631;&#x627;&#x642; <span style="color:red;">&#x627;&#x646;</span> &#x627;&#x644;&#x627;&#x648;&#x644;&#x648;&#x64a;&#x629; &#x62d;&#x627;&#x644;&#x64a;&#x627;</li>
-<li style="list-style-image:url(goto2rtl.gif)">&#x644;&#x644;&#x639;&#x631;&#x627;&#x642; &#x627;&#x646; &#x627;&#x644;&#x627;&#x648;&#x644;&#x648;&#x64a;&#x629; &#x62d;&#x627;&#x644;&#x64a;&#x627;</li>
+<li style="list-style-image:url(assets/goto2rtl.gif)">&#x644;&#x644;&#x639;&#x631;&#x627;&#x642; &#x627;&#x646; &#x627;&#x644;&#x627;&#x648;&#x644;&#x648;&#x64a;&#x629; &#x62d;&#x627;&#x644;&#x64a;&#x627;</li>
 <li style="list-style-type: U+263Argb(255,0,0);">&#x644;&#x644;&#x639;&#x631;&#x627;&#x642; &#x627;&#x646; &#x627;&#x644;&#x627;&#x648;&#x644;&#x648;&#x64a;&#x629; &#x62d;&#x627;&#x644;&#x64a;&#x627;</li>
 <li style="list-style-type: disc">&#x644;&#x644;&#x639;&#x631;&#x627;&#x642; &#x627;&#x646; &#x627;&#x644;&#x627;&#x648;&#x644;&#x648;&#x64a;&#x629; &#x62d;&#x627;&#x644;&#x64a;&#x627;</li>
 </ol>

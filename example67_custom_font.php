@@ -16,7 +16,7 @@ $mpdf = new \Mpdf\Mpdf([
 		__DIR__,
 	],
 	'fontdata' => $fontData + ['angerthas' => [
-		'R' => 'angerthas.ttf',
+		'R' => 'assets/angerthas.ttf',
 	]],
 	'default_font' => 'angerthas'
 ]);
