@@ -1,7 +1,5 @@
 <?php
 
-
-
 $html = '
 <style>
 table { border-collapse: collapse; margin-top: 0; text-align: center; }
@@ -85,16 +83,16 @@ h1 { margin-bottom: 0; }z
 
 
 Images returned from tiger.php
+
 <div>
-GIF <img style="vertical-align: top" src="tiger.php?t=gif" width="85" />
-JPG <img style="vertical-align: top" src="tiger.php?t=jpg" width="85" />
-PNG <img style="vertical-align: top" src="tiger.php?t=png" width="85" />
-WMF <img style="vertical-align: top" src="tiger.php?t=wmf" width="85" />
-SVG <img style="vertical-align: top" src="tiger.php?t=svg" width="85" />
+	GIF <img style="vertical-align: top" src="tiger.php?t=gif" width="85" />
+	JPG <img style="vertical-align: top" src="tiger.php?t=jpg" width="85" />
+	PNG <img style="vertical-align: top" src="tiger.php?t=png" width="85" />
+	WMF <img style="vertical-align: top" src="tiger.php?t=wmf" width="85" />
+	SVG <img style="vertical-align: top" src="tiger.php?t=svg" width="85" />
 </div>
 
 <pagebreak />
-
 
 <h3>Image Alignment</h3>
 <div>In-line images can be individually aligned (vertically). Most of the values for "vertical-align" are supported: top, bottom, middle, baseline, text-top, and text-bottom. The default value for vertical alignment is baseline, and the default padding 0, consistent with most browsers.
