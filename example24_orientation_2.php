@@ -136,7 +136,7 @@ $footerE = '<div align="center" style="background-color: #f0f2ff;background: tra
 		My document
 	</div>';
 
-$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__ . '/../../..';
+$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__;
 require_once $path . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf([

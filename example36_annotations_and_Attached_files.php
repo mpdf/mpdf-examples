@@ -8,7 +8,7 @@ $html = '<h1>mPDF</h1>
 Double-click to open attached file
 Right-click to save file on your computer" icon="Graph" title="Attached File: assets/tiger.jpg" pos-x="195" />  sed, nulla. Integer sit amet odio sit amet lectus luctus euismod. Donec et nulla. Sed quis orci. </p>';
 
-$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__ . '/../../..';
+$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__;
 require_once $path . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf(['mode' => 'c']);

@@ -33,7 +33,7 @@ Address: Vestibulum feugiat, orci at imperdiet tincidunt, mauris erat facilisis 
 nisl et lectus. Sed lacinia, lectus vitae dictum sodales, elit ipsum ultrices orci, non euismod arcu diam non metus.
 </address>';
 
-$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__ . '/../../..';
+$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__;
 require_once $path . '/vendor/autoload.php';
 
 // default watermark angle is 45°

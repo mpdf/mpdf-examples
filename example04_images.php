@@ -185,7 +185,7 @@ Image padding is supported as well as border and margin.
 <img src="assets/tiger.svg" rotate="-90" width="85" />
 <br />';
 
-$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__ . '/../../..';
+$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__;
 require_once $path . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf(['mode' => 'c']);

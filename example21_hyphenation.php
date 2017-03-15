@@ -337,7 +337,7 @@ or a quaver that spoiled the most pensive tune. They had always done this from t
 was a born singer. The first sound in the morning was her voice as she went about the house singing like a lark,
 and the last sound at night was the same cheery sound, for the girls never grew too old for that familiar lullaby.';
 
-$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__ . '/../../..';
+$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__;
 require_once $path . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf([
