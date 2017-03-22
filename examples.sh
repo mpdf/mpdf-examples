@@ -30,7 +30,7 @@ php example32_indic.php > examples/example32_indic.pdf
 php example33_unicode_supplementary_planes.php > examples/example33_unicode_supplementary_planes.pdf
 php example34_invoice_example.php > examples/example34_invoice_example.pdf
 php example35_watermarks.php > examples/example35_watermarks.pdf
-php example36_annotations_and_Attached_files.php > examples/example36_annotations_and_Attached_files.pdf
+php example36_annotations_and_attached_files.php > examples/example36_annotations_and_attached_files.pdf
 php example37_barcodes.php > examples/example37_barcodes.pdf
 php example38_dot_tab.php > examples/example38_dot_tab.pdf
 php example39_PDFA_compliance.php > examples/example39_PDFA_compliance.pdf
