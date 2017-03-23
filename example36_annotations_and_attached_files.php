@@ -4,13 +4,13 @@ $html = '
 <h1>mPDF</h1>
 <h2>Annotations</h2>
 
-<h5>
-	Heading 5
+<h3>
+	Heading 3
 	<annotation content="This is an annotation' . "\n" . 'in the middle of the text"
 		subject="My Subject" icon="Comment" color="#FE88EF" author="Ian Back" />
-</h5>
+</h3>
 
-<h6>Heading 6</h6>
+<h4>Heading 4</h4>
 
 <p>P: Nulla felis erat, imperdiet eu, ullamcorper non, nonummy quis, elit. Suspendisse potenti. Ut a eros at ligula
 vehicula pretium. Maecenas feugiat pede vel risus. Nulla et lectus. <i>Fusce</i>
@@ -21,19 +21,23 @@ eleifend neque sit amet erat. Integer consectetuer nulla non orci. Morbi feugiat
 Donec mattis, nisi id euismod auctor, neque metus pellentesque risus, at <span title="This annotation was automatically
 defined from the title attribute of a span element">eleifend</span> lacus sapien et risus. Phasellus metus. Phasellus
 feugiat, lectus ac aliquam molestie, leo lacus tincidunt turpis, vel aliquam quam odio et sapien.
-Mauris ante pede, auctor ac, suscipit quis, malesuada
+Mauris ante pede, auctor ac, suscipit quis, malesuada</p>
+
+<p> Note that since mPDF v7.0.0, embedded annotation files must be explicitly allowed by setting
+<code>allowAnnotationFiles</code> configuration key to true. Otherwise, the file attribute of <code>annotation</code> tag
+will be ignored.
 
 <annotation file="assets/tiger.jpg" content="This is a file attachment (embedded file)
 Double-click to open attached file
 Right-click to save file on your computer" icon="Graph" title="Attached File: assets/tiger.jpg" pos-x="195" />
 
-sed, nulla. Integer sit amet odio sit amet lectus luctus euismod. Donec et nulla. Sed quis orci. </p>
+</p>
 ';
 
 $path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__;
 require_once $path . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf(['mode' => 'c']);
+$mpdf = new \Mpdf\Mpdf(['mode' => 'c', 'allowAnnotationFiles' => true]);
 
 $mpdf->title2annots = true;
 
