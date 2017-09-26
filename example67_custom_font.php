@@ -5,16 +5,13 @@ $path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__;
 require_once $path . '/vendor/autoload.php';
 
 $defaultConfig = (new Mpdf\Config\ConfigVariables())->getDefaults();
-$fontDir = $defaultConfig['fontDir'];
+$fontDirs = $defaultConfig['fontDir'];
 
 $defaultFontConfig = (new Mpdf\Config\FontVariables())->getDefaults();
 $fontData = $defaultFontConfig['fontdata'];
 
 $mpdf = new \Mpdf\Mpdf([
-	'fontDir' => [
-		$fontDir,
-		__DIR__,
-	],
+	'fontDir' => array_merge($fontDirs, [__DIR__]),
 	'fontdata' => $fontData + ['angerthas' => [
 		'R' => 'assets/angerthas.ttf',
 	]],
