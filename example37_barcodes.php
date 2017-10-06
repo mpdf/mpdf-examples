@@ -358,27 +358,31 @@ mpdf-->
 </tbody>
 </table>
 
-<!-- QR-CODE
+<!-- QR-CODE -->
 <h3>2D Code (QR-code)</h3>
 <p>A nominal height and width for these barcodes is set as 25mm. \'size\' will scale both the height and width.</p>
+
 <table class="items" width="100%" cellpadding="8" border="1">
 <thead>
-<tr>
-<td width="10%">CODE</td>
-<td>DESCRIPTION</td>
-<td>BARCODE</td>
-</tr>
+	<tr>
+		<td width="15%">CODE</td>
+		<td>DESCRIPTION</td>
+		<td>BARCODE</td>
+	</tr>
 </thead>
 <tbody>
-<tr>
-<td align="center">QR-code</td>
-<td>QR-code. Accepts numeric, alphanumeric or binary input, with specified error level: L, M, Q, H.</td>
-<td class="barcodecell"><barcode code="Your message here" type="QR" class="barcode" size="0.8" error="M" /></td>
-</tr>
+	<tr>
+		<td align="center">QR-code</td>
+		<td>QR-code. Accepts numeric, alphanumeric or binary input, with specified error level: L, M, Q, H.</td>
+		<td class="barcodecell"><barcode code="Your message here" type="QR" class="barcode" size="0.8" error="M" disableborder="1" /></td>
+	</tr>
+	<tr>
+		<td align="center">QR-code with line break</td>
+		<td>QR-code code can contain <code>\n</code> or <code>\r\n</code> sequences that will be converted to <code>LF</code> or <code>CRLF</code> characters</td>
+		<td class="barcodecell"><barcode code="Your message\ngoes here" type="QR" class="barcode" size="0.8" error="M" /></td>
+	</tr>
 </tbody>
 </table>
--->
-
 
 <br />
 
