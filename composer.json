@@ -2,6 +2,6 @@
     "name": "mpdf/examples",
     "description": "Example repository for Mpdf HTML to PDF generator",
     "require": {
-        "mpdf/mpdf": "7.0.0-beta2"
+        "mpdf/mpdf": "^7.0.1"
     }
 }
