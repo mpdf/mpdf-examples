@@ -47,7 +47,7 @@ $mpdf = new \Mpdf\Mpdf([
 
 $mpdf->mirrorMargins = 1;
 $mpdf->SetDisplayMode('fullpage','two');
-$mpdf->useOnlyCoreFonts = true;
+$mpdf->onlyCoreFonts = true;
 $mpdf->defaultfooterfontsize = 13;
 $mpdf->AddPage();
 $mpdf->Image('assets/clematis.jpg',0,0,210,297,'jpg','',true, false);	// e.g. the last "false" allows a full page picture
