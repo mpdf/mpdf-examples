@@ -165,9 +165,6 @@ function SinglePage(Mpdf\Mpdf $mpdf, $html, $pw, $ph, $minK = 1, $inc = 0.1)
 			if (isset($mpdf->PageAnnots[$mpdf->page])) {
 				unset($mpdf->PageAnnots[$mpdf->page]);
 			}
-			if (isset($mpdf->ktBlock[$mpdf->page])) {
-				unset($mpdf->ktBlock[$mpdf->page]);
-			}
 			if (isset($mpdf->PageLinks[$mpdf->page])) {
 				unset($mpdf->PageLinks[$mpdf->page]);
 			}
