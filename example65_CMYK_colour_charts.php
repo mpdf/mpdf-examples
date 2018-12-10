@@ -6,7 +6,7 @@ require_once $path . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf(['mode' => 'win-1252', 'format' => 'A4-L']);
 
-$mpdf->useOnlyCoreFonts = true;
+$mpdf->onlyCoreFonts = true;
 $mpdf->SetDisplayMode('fullpage');
 $mpdf->SetFontSize(6);
 
