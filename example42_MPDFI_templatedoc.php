@@ -12,8 +12,6 @@ $mpdf = new \Mpdf\Mpdf([
 	'margin_footer' => 9
 ]);
 
-$mpdf->SetImportUse();
-
 $mpdf->SetDocTemplate('pdf/sample_logoheader2.pdf',1);	// 1|0 to continue after end of document or not - used on matching page numbers
 
 //===================================================

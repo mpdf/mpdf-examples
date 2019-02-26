@@ -3,7 +3,20 @@
 $path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__;
 require_once $path . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf([
+class Pdf extends \Mpdf\Mpdf
+{
+	public function clipRect($x, $y, $width, $heigth)
+	{
+		$this->pages[$this->page] .= $this->_setClippingPath($x, $y, $width, $heigth);
+	}
+
+	public function endClip()
+	{
+		$this->pages[$this->page] .= ' Q ';
+	}
+}
+
+$mpdf = new Pdf([
 	'margin_left' => 15,
 	'margin_right' => 15,
 	'margin_top' => 57,
@@ -11,8 +24,6 @@ $mpdf = new \Mpdf\Mpdf([
 	'margin_header' => 9,
 	'margin_footer' => 9
 ]);
-
-$mpdf->SetImportUse();
 
 $mpdf->SetDisplayMode('fullpage');
 
@@ -26,15 +37,15 @@ $crop_y = 50;
 $crop_w = 100;
 $crop_h = 100;
 
-$tplIdx = $mpdf->ImportPage(2, $crop_x, $crop_y, $crop_w, $crop_h);
+$tplIdx = $mpdf->ImportPage(2);
 
-$x = 50;
-$y = 50;
-$w = 100;
-$h = 100;
+$mpdf->AddPage();
+$mpdf->clipRect($crop_x, $crop_y, $crop_w, $crop_h);
 
-$mpdf->UseTemplate($tplIdx, $x, $y, $w, $h);
+$mpdf->useTemplate($tplIdx);
 
-$mpdf->Rect($x, $y, $w, $h);
+$mpdf->endClip();
+
+$mpdf->Rect($crop_x, $crop_y, $crop_w, $crop_h);
 
 $mpdf->Output('newpdf.pdf', 'I');
