@@ -82,7 +82,6 @@ $mpdf->Output('test.pdf', 'F');
 // Now collate those pages using IMPORT - 4 pages to one page
 
 $mpdf = new \Mpdf\Mpdf();
-$mpdf->SetImportUse();
 $mpdf->SetDisplayMode('fullpage');
 
 $mpdf->SetHeader('{DATE j-m-Y}|My Yearbook 2005|{PAGENO}');
@@ -119,12 +118,12 @@ for ($i = 1; $i <= $pagecount; $i++) {
 		$y = $y2;
 	}
 
-	$tplIdx = $mpdf->ImportPage($i, 0, 0, $pw, $pph[$i]);
+	$tplIdx = $mpdf->ImportPage($i);
 
 	if ($align == 'T') {
-		$mpdf->UseTemplate($tplIdx, $x, $y, $pw, $pph[$i]);
+		$mpdf->useTemplate($tplIdx, $x, $y);
 	} else {
-		$mpdf->UseTemplate($tplIdx, $x, ($y + (($ph - $pph[$i]) / 2)), $pw, $pph[$i]);
+		$mpdf->useTemplate($tplIdx, $x, ($y + (($ph - $pph[$i]) / 2)));
 	}
 
 	if ($border >= 0) {
@@ -196,7 +195,7 @@ function SinglePage(Mpdf\Mpdf $mpdf, $html, $pw, $ph, $minK = 1, $inc = 0.1)
 		$currpage = $mpdf->page;
 
 		$mpdf->_out('2 J');
-		$mpdf->_out(sprintf('%.2f w', 0.1 * $mpdf->k));
+		$mpdf->_out('0 w');
 		$mpdf->SetFont($mpdf->default_font, '', $mpdf->default_font_size, TRUE, TRUE);    // forces write
 		$mpdf->SetDrawColor(0);
 		$mpdf->SetFillColor(255);

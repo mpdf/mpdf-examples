@@ -6,8 +6,6 @@ require_once $path . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf();
 
-$mpdf->SetImportUse();
-
 $mpdf->Thumbnail('pdf/sample_orientation2.pdf', 4, 5);	// number per row	// spacing in mm
 
 $mpdf->WriteHTML('<pagebreak /><div>Now with rotated pages</div>');

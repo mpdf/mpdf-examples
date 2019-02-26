@@ -101,7 +101,6 @@ $mpdf = new \Mpdf\Mpdf([
 ]);
 
 
-$mpdf->SetImportUse();
 $ow = $mpdf->h;
 $oh = $mpdf->w;
 $pw = $mpdf->w / 2;
@@ -115,12 +114,12 @@ $pp = GetBookletPages($pagecount);
 foreach($pp AS $v) {
 	$mpdf->AddPage();
 	if ($v[0]>0 && $v[0]<=$pagecount) {
-		$tplIdx = $mpdf->ImportPage($v[0], 0,0,$ow,$oh);
-		$mpdf->UseTemplate($tplIdx, 0, 0, $pw, $ph);
+		$tplIdx = $mpdf->ImportPage($v[0]);
+		$mpdf->useTemplate($tplIdx, 0, 0, $pw, $ph);
 	}
 	if ($v[1]>0 && $v[1]<=$pagecount) {
-		$tplIdx = $mpdf->ImportPage($v[1], 0,0,$ow,$oh);
-		$mpdf->UseTemplate($tplIdx, $pw, 0, $pw, $ph);
+		$tplIdx = $mpdf->ImportPage($v[1]);
+		$mpdf->useTemplate($tplIdx, $pw, 0, $pw, $ph);
 	}
 }
 
