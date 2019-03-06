@@ -2,3 +2,4 @@ examples/
 examples56/
 vendor/
 composer.lock
+/*.pdf
