@@ -43,4 +43,6 @@ $mpdf->title2annots = true;
 
 $mpdf->WriteHTML($html);
 
+$mpdf->Annotation("File annotation", 0, 0, 'Note', '', '', 0, false, '', 'assets/tiger.jpg');
+
 $mpdf->Output();
