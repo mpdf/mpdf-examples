@@ -19,18 +19,28 @@ $defs = $m[1];
 $html = preg_replace('/<svg[^>]*>\s*<defs.*?<\/defs>\s*<\/svg>/', '', $html);
 $html = preg_replace('/(<svg[^>]*>)/', "\\1" . $defs, $html);
 
-preg_match_all('/<svg([^>]*)style="(.*?)"/', $html, $m);
-for ($i = 0; $i < count($m[0]); $i++) {
-	$style = $m[2][$i];
-	preg_match('/width: (.*?);/', $style, $wr);
-	$w = $sizeConverter->convert($wr[1], 0, $mpdf->FontSize) * $mpdf->dpi / 25.4;
-	preg_match('/height: (.*?);/', $style, $hr);
-	$h = $sizeConverter->convert($hr[1], 0, $mpdf->FontSize) * $mpdf->dpi / 25.4;
-	$replace = '<svg' . $m[1][$i] . ' width="' . $w . '" height="' . $h . '" style="' . $m[2][$i] . '"';
-	$html = str_replace($m[0][$i], $replace, $html);
+//var_dump($html, $defs);die;
+
+preg_match_all('/<svg([^>]*)>/', $html, $m);
+foreach ($m as $attributes) {
+	foreach ($attributes as $attribute) {
+		preg_match('/width="(.*?)"/', $attribute, $wr);
+		preg_match('/height="(.*?)"/', $attribute, $hr);
+		//var_dump($wr, $hr);
+		if ($wr && $hr) {
+			$w = $sizeConverter->convert($wr[1], 0, $mpdf->FontSize) * $mpdf->dpi / 25.4;
+			$h = $sizeConverter->convert($hr[1], 0, $mpdf->FontSize) * $mpdf->dpi / 25.4;
+			//var_dump($w, $h);
+			$html = str_replace('width="' . $wr[1] . '"', 'width="' . $w . '"', $html);
+			$html = str_replace('height="' . $hr[1] . '"', 'height="' . $h . '"', $html);
+		}
+	}
 }
 
-if ($_POST['PDF'] === 'PDF') {
+$html = str_replace('stroke="currentColor"', 'stroke="#FFF"', $html);
+$html = str_replace('fill="currentColor"', 'fill="#000"', $html);
+
+if (isset($_POST['PDF']) && $_POST['PDF'] === 'PDF') {
 
 	// add a stylesheet
 	$stylesheet = '
@@ -40,7 +50,7 @@ if ($_POST['PDF'] === 'PDF') {
 	.MathJax_SVG_Display {
 		padding: 1em 0;
 	}
-	#mpdf-create {
+	#mpdf-create, script {
 		display: none;
 	}
 	h3 {

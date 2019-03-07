@@ -174,11 +174,9 @@ this.getField(\'inputfield\').value = \'T\u00f6rkylempij\u00e4\';
 
 //==============================================================
 $mpdf->useActiveForms = true;
-$mpdf->formUseZapD = false;
 
 /*
 // Try playing around with these (these are also in config.php)
-$mpdf->formUseZapD = false;
 $mpdf->formSubmitNoValueFields = true;
 
 $mpdf->formExportType = 'xfdf'; // 'html' or 'xfdf'
