@@ -3,8 +3,7 @@
 // First write all your entries to a PDF file, forcing each entry to fit on one page
 
 // required to load FPDI classes
-$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__;
-require_once $path . '/vendor/autoload.php';
+require_once __DIR__ . '/bootstrap.php';
 
 // Define the maximum containing box width & height for each text box as it will appear on the final page (no padding or margin here)
 $pw = 80;
@@ -39,12 +38,12 @@ $html1 = '
 div { text-align: justify; }
 </style>
 <h2>Joanne Smith 2002-2007</h2>
-<div>This is the normal text in the div: Nulla felis erat, imperdiet eu, ullamcorper non, 
-nonummy quis, elit. Suspendisse potenti. Ut a eros orci. Morbi feugiat pulvinar dolor. Cras odio. Donec mattis, nisi id 
-euismod auctor, neque metus pellentesque, <img src="assets/tiger.wmf" width="100" style="float: right; margin: 4px; " /> 
-risus at eleifend lacus sapien et risus. Phasellus metus. Phasellus feugiat, lectus ac aliquam molestie, leo lacus 
+<div>This is the normal text in the div: Nulla felis erat, imperdiet eu, ullamcorper non,
+nonummy quis, elit. Suspendisse potenti. Ut a eros orci. Morbi feugiat pulvinar dolor. Cras odio. Donec mattis, nisi id
+euismod auctor, neque metus pellentesque, <img src="assets/tiger.wmf" width="100" style="float: right; margin: 4px; " />
+risus at eleifend lacus sapien et risus. Phasellus metus. Phasellus feugiat, lectus ac aliquam molestie, leo lacus
 tincidunt turpis, vel aliquam quam odio et sapien. Mauris ante pede, auctor ac, suscipit quis, malesuada sed,
-<img src="assets/tiger.jpg" width="100" style="float: left; margin: 4px; " /> nulla. Integer sit amet odio sit amet 
+<img src="assets/tiger.jpg" width="100" style="float: left; margin: 4px; " /> nulla. Integer sit amet odio sit amet
 lectus luctus euismod. Donec et nulla. Sed quis orci. </div>
 ';
 
@@ -53,16 +52,16 @@ $html2 = '
 div { text-align: justify; }
 </style>
 <h2>Tim Another 2001-2007</h2>
-<div>This is the normal text in the div: Nulla felis erat, imperdiet eu, ullamcorper non, 
-nonummy quis, elit. Suspendisse potenti. Ut a eros at ligula vehicula pretium. Maecenas feugiat pede vel risus. et 
-lectus. Fusce eleifend neque sit amet erat. Integer consectetuer nulla non orci. Morbi feugiat pulvinar dolor. Cras 
-odio. Donec mattis, nisi id euismod auctor, neque metus pellentesque, 
-<img src="assets/tiger.jpg" width="100" style="float: right; margin: 4px; " /> risus at eleifend lacus sapien et risus. 
-Phasellus metus, suscipit quis, malesuada sed, nulla. Integer sit amet odio sit amet lectus luctus euismod. Donec et 
+<div>This is the normal text in the div: Nulla felis erat, imperdiet eu, ullamcorper non,
+nonummy quis, elit. Suspendisse potenti. Ut a eros at ligula vehicula pretium. Maecenas feugiat pede vel risus. et
+lectus. Fusce eleifend neque sit amet erat. Integer consectetuer nulla non orci. Morbi feugiat pulvinar dolor. Cras
+odio. Donec mattis, nisi id euismod auctor, neque metus pellentesque,
+<img src="assets/tiger.jpg" width="100" style="float: right; margin: 4px; " /> risus at eleifend lacus sapien et risus.
+Phasellus metus, suscipit quis, malesuada sed, nulla. Integer sit amet odio sit amet lectus luctus euismod. Donec et
 nulla. Sed quis orci.  <br />
-Morbi feugiat pulvinar dolor. Cras odio. Donec mattis, nisi id euismod auctor, neque metus pellentesque risus, at 
-eleifend lacus sapien et risus. Phasellus metus. Phasellus feugiat, lectus ac aliquam molestie, leo lacus tincidunt 
-turpis, vel aliquam quam odio et sapien. Mauris ante pede, auctor ac, suscipit quis, malesuada sed, nulla. Integer 
+Morbi feugiat pulvinar dolor. Cras odio. Donec mattis, nisi id euismod auctor, neque metus pellentesque risus, at
+eleifend lacus sapien et risus. Phasellus metus. Phasellus feugiat, lectus ac aliquam molestie, leo lacus tincidunt
+turpis, vel aliquam quam odio et sapien. Mauris ante pede, auctor ac, suscipit quis, malesuada sed, nulla. Integer
 sit amet odio sit amet lectus luctus euismod. Donec et nulla. Sed quis orci.</div>
 ';
 

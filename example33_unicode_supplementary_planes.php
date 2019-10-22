@@ -167,7 +167,7 @@ $this->fontdata = array(<br />
 &lt;/div&gt;
 </div>
 
-<p>NB You may also need to edit the value $this->useAdobeCJK=false in config.php or use <code>new \Mpdf\Mpdf([\'mode\' => \'-aCJK\']);</code>, and edit the config_cp.php configuration file.</p>
+<p>NB You may also need to set useAdobeCJK to false in $config constructor parameter or use <code>new \Mpdf\Mpdf([\'mode\' => \'-aCJK\']);</code>.</p>
 
 
 <pagebreak />
@@ -265,8 +265,7 @@ $this->fontdata = array(<br />
 //==============================================================
 //==============================================================
 
-$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__;
-require_once $path . '/vendor/autoload.php';
+require_once __DIR__ . '/bootstrap.php';
 
 $mpdf = new \Mpdf\Mpdf();
 

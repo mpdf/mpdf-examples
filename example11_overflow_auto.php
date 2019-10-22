@@ -15,7 +15,7 @@ $html = '
 
 <address>Address: Vestibulum feugiat, orci at imperdiet tincidunt, mauris erat facilisis urna, sagittis ultricies dui nisl et lectus. Sed lacinia, lectus vitae dictum sodales, elit ipsum ultrices orci, non euismod arcu diam non metus.</address>
 
-<div><a href="dummy'.time().'">Hyperlink (&lt;a&gt;)</a></div>
+<div><a href="dummy123456">Hyperlink (&lt;a&gt;)</a></div>
 <div><a href="#top">Hyperlink (&lt;a&gt;)</a></div>
 <div><a href="http://www.pallcare.info">Hyperlink (&lt;a&gt;)</a></div>
 
@@ -54,8 +54,7 @@ $html = '
 
 </div>';
 
-$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__;
-require_once $path . '/vendor/autoload.php';
+require_once __DIR__ . '/bootstrap.php';
 
 $mpdf = new \Mpdf\Mpdf(['mode' => 'c']);
 

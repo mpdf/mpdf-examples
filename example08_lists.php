@@ -132,8 +132,7 @@ ol, ul { text-align: justify;
 
 //echo $html; exit;
 //==============================================================
-$path = (getenv('MPDF_ROOT')) ? getenv('MPDF_ROOT') : __DIR__;
-require_once $path . '/vendor/autoload.php';
+require_once __DIR__ . '/bootstrap.php';
 
 $mpdf = new \Mpdf\Mpdf();
 
