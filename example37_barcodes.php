@@ -266,6 +266,11 @@ mpdf-->
 <td>CODE 128 C. Valid characters: [0-9]. Must be an even number of digits. Checksum digit: automatic.</td>
 <td class="barcodecell"><barcode code="0123456789" type="C128C" class="barcode" /></td>
 </tr>
+<tr>
+<td align="center">C128RAW [A/B/C]</td>
+<td>CODE 128 A/B/C symbols. You can generate any barcode (symbol by symbol). Can change subtype in middle of code to create shorter barcodes (example 128A vs 128raw). Startcode need to be specified (103-105 for A/B/C). Checksum digit: automatic.</td>
+<td class="barcodecell"><barcode code="A0123456789" type="C128A" class="barcode" /><br><barcode code="103 33 99 01 23 45 67 89" type="C128RAW" class="barcode" /></td>
+</tr>
 
 <tr>
 <td align="center">EAN128C [A/B/C]</td>
