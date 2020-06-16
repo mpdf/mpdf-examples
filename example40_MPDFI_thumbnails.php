@@ -16,3 +16,5 @@ $mpdf->WriteHTML('<pagebreak /><div>Now with more rotated pages</div>');
 $mpdf->Thumbnail('pdf/sample_rotated.pdf', 4);	// number per row	// spacing in mm
 
 $mpdf->Output();
+
+$mpdf->cleanup();

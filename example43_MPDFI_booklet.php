@@ -124,4 +124,6 @@ foreach($pp AS $v) {
 
 $mpdf->Output();
 
+$mpdf->cleanup();
+
 unlink('test.pdf');

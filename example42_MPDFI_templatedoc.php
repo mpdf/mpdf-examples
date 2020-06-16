@@ -34,3 +34,5 @@ $mpdf->WriteHTML('Hello World');
 //===================================================
 
 $mpdf->Output();
+
+$mpdf->cleanup();

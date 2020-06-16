@@ -48,3 +48,5 @@ $mpdf->endClip();
 $mpdf->Rect($crop_x, $crop_y, $crop_w, $crop_h);
 
 $mpdf->Output('newpdf.pdf', 'I');
+
+$mpdf->cleanup();
