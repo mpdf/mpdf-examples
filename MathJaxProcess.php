@@ -3,7 +3,7 @@
 require_once __DIR__ . '/bootstrap.php';
 
 $mpdf = new \Mpdf\Mpdf();
-$sizeConverter = new \Mpdf\SizeConverter($mpdf->dpi, $mpdf->default_font_size);
+$sizeConverter = new \Mpdf\SizeConverter($mpdf->dpi, $mpdf->default_font_size, $mpdf, new \Psr\Log\NullLogger());
 
 if (strpos($_REQUEST['bodydata'], 'id%3D%22MathJax_SVG_Hidden%22') === false) {
 	die('Hacking attempt');
