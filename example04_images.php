@@ -13,6 +13,7 @@ h1 { margin-bottom: 0; }z
 <td>GIF</td>
 <td>JPG</td>
 <td>JPG (CMYK)</td>
+<td>WEBP</td>
 <td>PNG</td>
 <td>BMP</td>
 <td>WMF</td>
@@ -22,6 +23,7 @@ h1 { margin-bottom: 0; }z
 <td><img style="vertical-align: top" src="assets/tiger.gif" width="80" /></td>
 <td><img style="vertical-align: top" src="assets/tiger.jpg" width="80" /></td>
 <td><img style="vertical-align: top" src="assets/tigercmyk.jpg" width="80" /></td>
+<td><img style="vertical-align: top" src="assets/tiger.webp" width="80" /></td>
 <td><img style="vertical-align: top" src="assets/tiger.png" width="80" /></td>
 <td><img style="vertical-align: top" src="assets/tiger.bmp" width="80" /></td>
 <td><img style="vertical-align: top" src="assets/tiger2.wmf" width="80" /></td>
@@ -36,6 +38,7 @@ h1 { margin-bottom: 0; }z
 <td><img style="vertical-align: top; opacity: 0.5" src="assets/tiger.gif" width="80" /></td>
 <td><img style="vertical-align: top; opacity: 0.5" src="assets/tiger.jpg" width="80" /></td>
 <td><img style="vertical-align: top; opacity: 0.5" src="assets/tigercmyk.jpg" width="80" /></td>
+<td><img style="vertical-align: top; opacity: 0.5" src="assets/tiger.webp" width="80" /></td>
 <td><img style="vertical-align: top; opacity: 0.5" src="assets/tiger.png" width="80" /></td>
 <td><img style="vertical-align: top; opacity: 0.5" src="assets/tiger.bmp" width="80" /></td>
 <td><img style="vertical-align: top; opacity: 0.5" src="assets/tiger2.wmf" width="80" /></td>
@@ -188,6 +191,15 @@ require_once __DIR__ . '/bootstrap.php';
 $mpdf = new \Mpdf\Mpdf([
 	'mode' => 'c',
 ]);
+
+$mpdf->setLogger(new class extends \Psr\Log\AbstractLogger {
+    public function log($level, $message, array $context = [])
+    {
+        // echo $level . ': ' . $message . "\n";
+    }
+});
+
+// $mpdf->showImageErrors = true;
 
 $mpdf->WriteHTML($html);
 
