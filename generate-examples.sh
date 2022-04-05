@@ -14,7 +14,7 @@ if [ ! -f "${MPDF_ROOT}/vendor/autoload.php" ]; then
     exit 1
 fi
 
-files=(./example??_*.php)
+files=(./example*_*.php)
 echo "Total files in list: ${#files[*]}, mPDF path ${MPDF_ROOT}"
 for var in "${files[@]}"
 do

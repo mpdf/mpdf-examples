@@ -84,7 +84,6 @@ h1 { margin-bottom: 0; }z
 <td style="background-color:#CCFFFF; background: transparent url(\'assets/bg.jpg\') repeat scroll right top;"><img style="vertical-align: top" src="assets/tiger.svg" width="85" /></td>
 </tr></table>
 
-
 Images returned from tiger.php
 
 <div>
@@ -192,12 +191,14 @@ $mpdf = new \Mpdf\Mpdf([
 	'mode' => 'c',
 ]);
 
-$mpdf->setLogger(new class extends \Psr\Log\AbstractLogger {
+class CustomLogger extends \Psr\Log\AbstractLogger {
     public function log($level, $message, array $context = [])
     {
         // echo $level . ': ' . $message . "\n";
     }
-});
+}
+
+$mpdf->setLogger(new CustomLogger());
 
 // $mpdf->showImageErrors = true;
 

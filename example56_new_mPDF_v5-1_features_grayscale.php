@@ -1,9 +1,10 @@
 <?php
 
-
 require_once __DIR__ . '/bootstrap.php';
 
-$mpdf = new \Mpdf\Mpdf();
+$mpdf = new \Mpdf\Mpdf([
+	'restrictColorSpace' => 1,
+]);
 
 $mpdf->restrictColorSpace = 1;	// forces to grayscale
 //==============================================================
