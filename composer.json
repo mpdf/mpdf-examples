@@ -2,7 +2,7 @@
     "name": "mpdf/examples",
     "description": "Example repository for Mpdf HTML to PDF generator",
     "require": {
-        "mpdf/mpdf": "^8.0",
+        "mpdf/mpdf": "^8.1",
         "guzzlehttp/guzzle": "^7.4"
     },
     "require-dev": {
